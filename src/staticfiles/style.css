@@ -71,7 +71,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-    background-image: url(./resources/Images/blue-check-mark.png);
+    background-image: url(../../mediafiles/blue-check-mark.png);
     background-repeat: no-repeat;
     background-size: 33px;
     background-position-y: 3px;
@@ -91,7 +91,7 @@ label {
     color: #FFFFFF;
 }
 
-.form_style {
+.form {
     display: flex;
     justify-content: center;
 }

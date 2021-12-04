@@ -5,6 +5,14 @@
 {% endblock %}
 
 {% block content %}
-    <h1>COMMENCEZ LES QUESTIONNAIRES TOUT DE SUITE !</h1>
-    <a href="{% url 'questions:general_infos' %}">Calculer mes aides</a>
+
+    <div id="logo">
+        <img src="./resources/Images/logo.png" alt="logo photen">
+    </div>
+
+
+    <div id="div_btn_simu">        
+        <a id="btn_simu" href="{% url 'questions:general_infos' %}">Lancer une simulation</a>
+    </div>
+
 {% endblock %}
