@@ -71,7 +71,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked {
-    background-image: url(../../mediafiles/blue-check-mark.png);
+    background-image: url("/static/media/blue-check-mark.png");
     background-repeat: no-repeat;
     background-size: 33px;
     background-position-y: 3px;
