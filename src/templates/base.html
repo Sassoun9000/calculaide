@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+  {% block title %}
+    <title>Calculateur d'aides PHOTEN</title>
+  {% endblock %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'index' %}">Accueil</a>
+    </nav>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
