@@ -8,20 +8,25 @@ body {
     margin-top: 2%;
 }
 
+p {
+    display: flex;
+    justify-content: center;
+}
+
 #div_btn_simu {
     text-align: center;
+    margin-top: 7%;
 }
 
 #btn_simu {
     width: 648px;
-    height: 178px;
-    margin-top: 8%;
+    height: 300px;
 
     background: #0095B6;
     border: 1px solid rgba(255, 255, 255, 0.46);
     box-shadow: 0px 0px 62px -5px rgba(0, 0, 0, 0.25), inset 0px 0px 5px 4px rgba(255, 255, 255, 0.25);
     border-radius: 8px;
-
+    padding: 40px;
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
@@ -79,7 +84,7 @@ input[type="checkbox"]:checked {
 }
 
 label {
-    min-width: 200px;
+    min-width: 300px;
     font-family: Raleway;
     font-style: normal;
     font-weight: 500;
@@ -87,13 +92,16 @@ label {
     line-height: 33px;
     display: flex;
     align-items: center;
-
     color: #FFFFFF;
+    border: 2px solid red
 }
 
 .form {
+    margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    width: 50%;
 }
 
 .tuile-input {

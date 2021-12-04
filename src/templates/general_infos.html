@@ -5,10 +5,10 @@
 {% endblock %}
 
 {% block content %}
-    <form method="post">
+    <form class="form" method="post">
         {% csrf_token %}
-        {{ infos }}
-        {{ project_type }}
+        {{ infos.as_p }}
+        {{ project_type.as_p }}
         <input type="submit">
     </form>
 {% endblock %}
