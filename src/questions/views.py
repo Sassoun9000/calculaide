@@ -11,5 +11,6 @@ def general_infos(request):
     context = {
         "infos": GeneralInfos(),
         "project_type": ProjectChoices(),
+        "pv_characteristics": CharacteristicsPv()
     }
     return render(request, "general_infos.html", context=context)

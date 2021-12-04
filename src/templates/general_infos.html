@@ -7,8 +7,19 @@
 {% block content %}
     <form class="form" method="post">
         {% csrf_token %}
-        {{ infos.as_p }}
-        {{ project_type.as_p }}
-        <input type="submit">
+
+        <div id="infos">
+            {{ infos.as_p }}
+        </div>
+
+        <div id="products">
+            {{ project_type.as_p }} 
+        </div>
+
+        <div id="pv_logement">
+            {{ pv_characteristics }}
+        </div>
+
+        <input class="next" type="submit" value="Suivant">
     </form>
 {% endblock %}
