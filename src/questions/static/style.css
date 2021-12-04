@@ -1,0 +1,106 @@
+body {
+    background: linear-gradient(60.4deg, #55B995 29.29%, #00A6B8 98.36%);
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+#div_btn_simu {
+    text-align: center;
+}
+
+#btn_simu {
+    width: 648px;
+    height: 178px;
+    margin-top: 8%;
+
+    background: #0095B6;
+    border: 1px solid rgba(255, 255, 255, 0.46);
+    box-shadow: 0px 0px 62px -5px rgba(0, 0, 0, 0.25), inset 0px 0px 5px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 56px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#btn_simu:active {
+    border: 3px solid rgba(255, 255, 255, 0.90);
+}
+
+.info_gen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    border: red 1px solid;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    border: 2px solid blue;
+}
+
+input {
+    background: rgba(185, 236, 211, 0.91);
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    margin-right: 50px;
+    width: 36px;
+    height: 36px;
+    left: 505px;
+    top: 421px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background: rgba(185, 236, 211, 0.91);;;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]:checked {
+    background-image: url(./resources/Images/blue-check-mark.png);
+    background-repeat: no-repeat;
+    background-size: 33px;
+    background-position-y: 3px;
+    background-position-x: 2px;
+}
+
+label {
+    min-width: 200px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.form_style {
+    display: flex;
+    justify-content: center;
+}
+
+.tuile-input {
+    background: rgba(185, 236, 211, 0.93);
+    border: 1px solid #0095B6;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 200px;
+    width: 230px;
+}
