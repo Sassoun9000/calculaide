@@ -15,9 +15,11 @@ nav {
 }
 
 nav a {
-    font-size: 40px;
+    font-size: 20px;
+    height: 90px;
     color: white;
-    
+    outline: none;
+    text-decoration: none;
 }
 
 nav #accueil {
@@ -26,9 +28,8 @@ nav #accueil {
     background-size:contain;
     background-position-x: right;
     height:60px;
-    width:170px;
+    width:185px;
     margin: 40px 40px 0px 0px;
-    border: 1px solid red;
 }
 
 #logo {
@@ -64,12 +65,12 @@ nav #accueil {
     border: 3px solid rgba(255, 255, 255, 0.90);
 }
 
-#infos, #products {
+#color, #products {
     max-width: 70%;
     margin: auto;
 }
 
-#infos p {
+#color p {
     display: flex;
     justify-content: space-between;
 }

@@ -9,7 +9,7 @@ def index(request):
 
 def general_infos(request):
     context = {
-        "infos": GeneralInfos(),
+        "color": ColorCategory(),
         "project_type": ProjectChoices(),
         "pv_characteristics": CharacteristicsPv()
     }
