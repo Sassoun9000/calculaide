@@ -8,6 +8,29 @@ body {
     font-family: "Raleway-Black";
 }
 
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+}
+
+nav a {
+    font-size: 40px;
+    color: white;
+    
+}
+
+nav #accueil {
+    background-image: url(../static/media/fleche-retour.png);
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position-x: right;
+    height:60px;
+    width:170px;
+    margin: 40px 40px 0px 0px;
+    border: 1px solid red;
+}
+
 #logo {
     display: flex;
     justify-content: center;
