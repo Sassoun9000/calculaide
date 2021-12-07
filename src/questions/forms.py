@@ -17,9 +17,10 @@ class GeneralInfos(forms.Form):
 
 
 class ProjectChoices(forms.Form):
-    pv = forms.BooleanField(label="Photovoltaïque")
+    pv = forms.BooleanField(label="Panneaux Photovoltaïques")
     pac = forms.BooleanField(label="Pompe à chaleur")
     iso = forms.BooleanField(label="Isolation des combles")
+    btd = forms.BooleanField(label="Ballon Thermodynamique")
 
 POWER_LEVEL = [("three", "3"), ("four_five", "4,5"), ("six", "6"), ("seven_five", "7,5"), ("nine", "9"), ("ten_five", "10,5"), ("twelve", "12")]
 PV_TYPE = [("classic", ""), ("hybrid", "")]

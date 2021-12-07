@@ -42,7 +42,7 @@ body {
 }
 
 #infos, #products {
-    width: 670px;
+    max-width: 70%;
     margin: auto;
 }
 
@@ -53,7 +53,7 @@ body {
 
 #products p {
     margin: auto;
-    max-width: 60%;
+    max-width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -84,7 +84,7 @@ body {
 }
 
 #id_pv_type #id_pv_type_0 {
-    background-image: url(./media/bckg-amenageables.png);
+    background-image: url(./media/bckgPVC.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 250px;
@@ -92,7 +92,7 @@ body {
 }
 
 #id_pv_type #id_pv_type_1 {
-    background-image: url(./media/bckg-perdues.png);
+    background-image: url(./media/bckgPVH.png);
     background-repeat: no-repeat;
     background-position: center;
     height: 250px;
@@ -182,7 +182,7 @@ input[type="checkbox"]:checked, input[type="radio"]:checked {
 
 label {
     margin: 2px;
-    min-width: 250px;
+    min-width: 350px;
     display: block;
     text-align: center;
     font-family: "Raleway-Black";
@@ -195,6 +195,11 @@ label {
     align-items: center;
     color: #ffffff;
 }
+
+#pv_logement p label {
+    display: block;
+    text-align: center;
+}    
 
 .form {
     margin: auto;
