@@ -2,33 +2,23 @@ from django.shortcuts import render
 
 from .forms import *
 
-from .utils import QPATH_FORMS
+from .utils import QPATH_FORMS, result_process
 
 
 def index(request):
     return render(request, "index.html")
 
 
-def general_infos(request):
-    context = {
-        "infos": ColorCategory(),
-        "project_type": ProjectChoices(),
-        "pv_characteristics": PVCharacteristics()
-    }
-    return render(request, "general_infos.html", context=context)
-
-
 def questions(request):
     context = dict()
     if request.method == "POST":
-        r = request.POST
+        r = request.POST.dict()
+        r.pop("csrfmiddlewaretoken", None)
         print(r)
-        if "previous" in r:
-            request.session["index"] -= 2
-            print("YOOOOP")
         current_index = request.session["index"]
         if current_index == 0:
             request.session["QPath"] = ["start",]
+            request.session["answers"] = {}
             if "pv" in r:
                 request.session["QPath"].append(QPATH_FORMS["pv"])
             if "pac" in r:
@@ -37,14 +27,24 @@ def questions(request):
                 request.session["QPath"].append(QPATH_FORMS["iso"])
             request.session["QPath"].append("ColorCategory()")
 
-        request.session["index"] += 1
+        if "previous" in r:
+            request.session["index"] -= 1
+        else:
+            request.session["index"] += 1
         i = request.session["index"]
+        if i == 1:
+            context["first_question"] = True
+
+        r.pop("next", None)
+        r.pop("previous", None)
+        request.session["answers"].update(r)
+        print(f"answers {request.session['answers']}")
+        if i == len(request.session["QPath"]):
+            context['results'] = result_process(request.session['answers'])
+            context['answers'] = request.session['answers']
+            return render(request, "results.html", context=context)
 
         context["form"] = eval(request.session["QPath"][i])
-        if i == 1:
-            context["2nd_question"] = True
-        if i == len(request.session["QPath"]):
-            return render(request, "results.html")
 
     else:
         request.session["index"] = 0
