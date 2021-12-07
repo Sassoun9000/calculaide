@@ -47,17 +47,15 @@ INMATES_NUMBER = [
     ("three", "3"),
     ("four", "4"),
     ("five", "5"),
-    ("six", "6"),
-    ("seven", "7"),
-    ("eight", "8"),
+    ("six", "6+"),
 ]
 
 
 COLOR_CODES = [
-    ("blue", "Bleu"),
-    ("yellow", "Jaune"),
-    ("purple", "Violet"),
-    ("rose", "Rose"),
+    ("blue", "14 879 €"),
+    ("yellow", "19 074€"),
+    ("purple", ""),
+    ("rose", ""),
 ]
 
 
@@ -67,4 +65,4 @@ class ColorCategory(forms.Form):
         label="Nombre de personnes composant le foyer fiscal",
         widget=forms.RadioSelect
     )
-    income_color = forms.ChoiceField(choices=COLOR_CODES, label="Type de panneaux", widget=forms.RadioSelect)
+    income_color = forms.ChoiceField(choices=COLOR_CODES, label="Catégorie", widget=forms.RadioSelect)
