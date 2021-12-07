@@ -19,12 +19,17 @@
   <body>
 
     <nav>
-        <a href="{% url 'index' %}">Accueil</a>
+      <a href="{% url 'index' %}">
+        <div id="accueil">
+          Retour à l'accueil
+        </div>
+      </a>
+
+      <div id="logo">
+        <img src="/static/media/logo.png" alt="logo photen">
+      </div>
     </nav>
 
-    <div id="logo">
-      <img src="/static/media/logo.png" alt="logo photen">
-    </div>
 
     {% block content %}
     {% endblock %}
