@@ -8,5 +8,5 @@ app_name = "questions"
 
 
 urlpatterns = [
-    path("", general_infos, name="general_infos")
+    path("", questions, name="questions-index")
 ]

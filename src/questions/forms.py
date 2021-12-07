@@ -11,14 +11,14 @@ forms.Form = BaseForm
 
 
 class ProjectChoices(forms.Form):
-    pv = forms.BooleanField(label="Panneaux Photovoltaïques")
-    pac = forms.BooleanField(label="Pompe à chaleur")
-    iso = forms.BooleanField(label="Isolation des combles")
-    btd = forms.BooleanField(label="Ballon Thermodynamique")
-    cesol = forms.BooleanField(label="Chauffe-eau solaire")
+    pv = forms.BooleanField(required=False, label="Panneaux Photovoltaïques")
+    pac = forms.BooleanField(required=False, label="Pompe à chaleur")
+    iso = forms.BooleanField(required=False, label="Isolation des combles")
+    btd = forms.BooleanField(required=False, label="Ballon Thermodynamique")
+    cesol = forms.BooleanField(required=False, label="Chauffe-eau solaire")
 
 
-POWER_LEVEL = [
+PV_POWER_LEVEL = [
     ("three", "3"),
     ("four_five", "4,5"),
     ("six", "6"),
@@ -27,13 +27,28 @@ POWER_LEVEL = [
     ("ten_five", "10,5"),
     ("twelve", "12")
 ]
-
 PV_TYPE = [("classic", ""), ("hybrid", "")]
 
 
-class CharacteristicsPv(forms.Form):
-    power = forms.ChoiceField(choices=POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=forms.RadioSelect)
+class PVCharacteristics(forms.Form):
+    power = forms.ChoiceField(choices=PV_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=forms.RadioSelect)
     pv_type = forms.ChoiceField(choices=PV_TYPE, label="Type de panneaux", widget=forms.RadioSelect)
+
+
+PAC_POWER_LEVEL = [
+    ("four", "4"),
+    ("six", "6"),
+    ("eight", "8"),
+    ("eleven", "11"),
+    ("fourteen", "14"),
+    ("sixteen", "16")
+]
+PAC_TYPE = [("airair", ""), ("aireau", "")]
+
+
+class PACCharacteristics(forms.Form):
+    power = forms.ChoiceField(choices=PAC_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=forms.RadioSelect)
+    pv_type = forms.ChoiceField(choices=PAC_TYPE, label="Type de panneaux", widget=forms.RadioSelect)
 
 
 class SurfaceIso(forms.Form):

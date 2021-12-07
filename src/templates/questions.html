@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Informations Générales</title>
+{% endblock %}
+
+{% block content %}
+    <form class="form" method="post">
+        {% csrf_token %}
+
+        <div id="form">
+            {{ form.as_p }}
+        </div>
+
+        {% if form2 %}
+        <div id="form2">
+            {{ form2.as_p }}
+        </div>
+        {% endif %}
+
+        <div id="form_nav">
+            {% if not first_question and not 2nd_question %}
+            <input class="previous" type="submit" name="previous" value="Précédent">
+            {% endif %}
+            {% if 2nd_question %}
+            <a href="{% url 'questions:questions-index' %}">Recommencer</a>
+            {% endif %}
+
+            <input class="next" type="submit" name="next" value="Suivant">
+        </div>
+    </form>
+{% endblock %}
