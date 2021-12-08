@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Informations Générales</title>
+{% endblock %}
+
+{% block content %}
+    <form class="form" method="post">
+        {% csrf_token %}
+
+        <div id="form">
+            {{ form.as_p }}
+        </div>
+
+        <div id="form_nav">
+            {% if not first_question%}
+            <input class="previous" type="submit" name="previous" value="Précédent">
+            {% endif %}
+
+            <input class="next" type="submit" name="next" value="Suivant">
+        </div>
+    </form>
+{% endblock %}
