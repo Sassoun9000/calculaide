@@ -10,8 +10,8 @@ body {
 
 nav {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: end;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 nav a {
@@ -36,6 +36,7 @@ nav #accueil {
     display: flex;
     justify-content: center;
     margin-top: 2%;
+    transform: translate(12%);
 }
 
 #div_btn_simu {
@@ -83,21 +84,24 @@ nav #accueil {
 }
 
 #color #id_family_members {
-    position: relative;
-    left: 65px;
+    display: flex;
+    justify-content: space-evenly;
+    transform: translate(-5%);
 }
 
 #color label {
-    min-width: 50px;
+    min-width: 0px;
+    display: flex;
+    flex-direction: row;
 }
 
 #color li {
     width: 0px;
 }
 
-#color input {
+#color #id_family_members input {
     min-width: 36px;
-    margin: 5px 5px 0px 0px;
+    margin: 0px 10px 0px 0px;;
 }
 
 #color #id_family_members input:checked {
@@ -113,10 +117,17 @@ nav #accueil {
     align-items: center;
 }
 
+#color #id_income_color li label {
+    min-width: 0px;
+    width: max-content;
+}
+
 #color #id_income_color li label input {
     width: 200px;
     min-width: 200px;
     height: 200px;
+    margin: 0px 0px 0px 0px;
+    z-index: -1;
 }
 
 #color #id_income_color li {
@@ -150,11 +161,6 @@ nav #accueil {
     border: solid 3px rgb(255, 255, 255);
     box-shadow: 0px 0px 2px 0px rgb(71, 71, 71);
     transition: 0.3s;
-}
-
-#color #id_income_color li label {
-    min-width: 0px;
-    width: 30px;
 }
 
 #products p {

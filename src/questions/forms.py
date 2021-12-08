@@ -53,9 +53,9 @@ INMATES_NUMBER = [
 
 COLOR_CODES = [
     ("blue", "14 879 €"),
-    ("yellow", "19 074€"),
-    ("purple", ""),
-    ("rose", ""),
+    ("yellow", "19 074 €"),
+    ("purple", "29 148 €"),
+    ("rose", "> 29 148 €"),
 ]
 
 
