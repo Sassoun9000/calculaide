@@ -11,10 +11,10 @@ forms.Form = BaseForm
 
 
 class ProjectChoices(forms.Form):
-    pv = forms.BooleanField(required=False, label="Panneaux Photovoltaïques")
+    pv = forms.BooleanField(required=False, label="Panneaux photovoltaïques")
     pac = forms.BooleanField(required=False, label="Pompe à chaleur")
     iso = forms.BooleanField(required=False, label="Isolation des combles")
-    btd = forms.BooleanField(required=False, label="Ballon Thermodynamique")
+    btd = forms.BooleanField(required=False, label="Ballon thermodynamique")
     cesol = forms.BooleanField(required=False, label="Chauffe-eau solaire")
 
 
