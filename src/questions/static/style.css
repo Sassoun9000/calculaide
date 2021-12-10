@@ -10,6 +10,9 @@
 body {
     background: linear-gradient(60.4deg, #55B995 29.29%, #00A6B8 98.36%);
     font-family: "Raleway-Black";
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 nav {
