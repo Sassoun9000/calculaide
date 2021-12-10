@@ -10,7 +10,7 @@
 body {
     background: linear-gradient(60.4deg, #55B995 29.29%, #00A6B8 98.36%);
     font-family: "Raleway-Black";
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -484,12 +484,28 @@ label {
     display: block;
 }
 
-h1, h2, h3 {
-text-align: center;
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    margin-left: 40px;
+    color: white;
 }
 
 #results_list {
     margin: auto;
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
 }
 
 .next:active, .previous:active {
