@@ -71,10 +71,11 @@ nav #accueil {
 
 
 .form {
-    margin: auto
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 70%;
 }
 
 #form_product {
@@ -87,6 +88,14 @@ nav #accueil {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    align-items: center;
+    max-width: 270px;
+}
+
+p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     max-width: 270px;
 }
@@ -117,14 +126,14 @@ nav #accueil {
     padding: 10px 30px 30px 30px;
 } 
 
-#id_pv_power {
+#id_pv_power, #id_power {
     display: flex;
     justify-content: center;
     list-style: none;
     margin-bottom: 50px;
 }
 
-#id_pv_power li {
+#id_pv_power li, #id_power li {
     width: 120px;
     height: 120px;
     margin: 0px 10px 0px 0px;
@@ -133,7 +142,7 @@ nav #accueil {
     align-items: center;
 }
 
-#id_pv_power input {
+#id_pv_power input, #id_power input {
     cursor: pointer;
     width: 120px;
     min-width: 120px;
@@ -148,7 +157,7 @@ nav #accueil {
     border-radius: 4px;
 }
 
-#id_pv_power label {
+#id_pv_power label, #id_power label {
     min-width: 0px;
     width: min-content;
     position: relative;
@@ -157,9 +166,7 @@ nav #accueil {
     color:rgb(54, 54, 54);
 }
 
-
-
-#id_pv_power input:not(:checked) {
+#id_pv_power input:not(:checked), #id_power input:not(:checked) {
     transition: 0.5s; 
 }
 
@@ -298,7 +305,29 @@ nav #accueil {
     width: 250px;
 }
 
-#id_pv_type_0:checked, #id_pv_type_1:checked {
+#id_pac_type_0 {
+    background-image: url(./media/air.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    padding: 10px 30px 30px 30px;
+    height: 250px;
+    width: 250px;
+}
+
+#id_pac_type_1 {
+    background-image: url(./media/water.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    padding: 10px 30px 30px 30px;
+    height: 250px;
+    width: 250px;
+}
+
+#id_pv_type_0:checked, #id_pv_type_1:checked, #id_pac_type_0:checked, #id_pac_type_1:checked {
     border: 5px solid rgb(27, 82, 153);
     scale: 103%;
     transition: 0.1s;
