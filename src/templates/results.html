@@ -11,4 +11,51 @@
 
     {{answers}}
 
+    {% if answers.pv %}
+        <h2>Primes PV</h2>
+    {% if results.pv_pr_sub %}
+        <h3>Prime rénov {{ results.pv_pr_sub }}</h3>
+    {% endif %}
+    {% if results.pv_cee_sub %}
+        <h3>CEE {{ results.pv_cee_sub }}</h3>
+    {% endif %}
+    {% endif %}
+    {% if answers.pac %}
+        <h2>Primes PAC</h2>
+    {% if results.pac_pr_sub %}
+        <h3>Prime rénov {{ results.pac_pr_sub }}</h3>
+    {% endif %}
+    {% if results.pac_pr_sub %}
+        <h3>CEE {{ results.pac_cee_sub }}</h3>
+    {% endif %}
+    {% endif %}
+    {% if answers.iso %}
+        <h2>Primes Isolation</h2>
+    {% if results.iso_pr_sub %}
+        <h3>Prime rénov {{ results.iso_pr_sub }}</h3>
+    {% endif %}
+    {% if results.iso_pr_sub %}
+        <h3>CEE {{ results.iso_cee_sub }}</h3>
+    {% endif %}
+    {% endif %}
+    {% if answers.btd %}
+        <h2>Primes Ballon thermodynamique</h2>
+    {% if results.btd_pr_sub %}
+        <h3>Prime rénov {{ results.btd_pr_sub }}</h3>
+    {% endif %}
+    {% if results.btd_pr_sub %}
+        <h3>CEE {{ results.btd_cee_sub }}</h3>
+    {% endif %}
+    {% endif %}
+    {% if answers.cesol %}
+        <h2>Primes Chauffe-eau solaire</h2>
+    {% if results.cesol_pr_sub %}
+        <h3>Prime rénov {{ results.cesol_pr_sub }}</h3>
+    {% endif %}
+    {% if results.cesol_pr_sub %}
+        <h3>CEE {{ results.cesol_cee_sub }}</h3>
+    {% endif %}
+    {% endif %}
+
+
 {% endblock %}

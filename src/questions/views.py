@@ -47,7 +47,7 @@ def questions(request):
 
         step_name = request.session["QPath"][i]
         context["form"] = eval(step_name)
-        context["form_id"] = f"form_{step_name}"
+        context["form_id"] = f"form_{step_name}".replace("()", "")
 
     else:
         request.session["index"] = 0
