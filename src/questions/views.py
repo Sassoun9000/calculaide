@@ -11,6 +11,7 @@ def index(request):
 
 def questions(request):
     context = dict()
+    print(f"request.method {request.method} ")
     if request.method == "POST":
         r = request.POST.dict()
         r.pop("csrfmiddlewaretoken", None)
@@ -51,5 +52,7 @@ def questions(request):
         context["form"] = ProjectChoices()
         context["first_question"] = True
         print("Première itération")
+
+    context["form_id"] = f"form_{request.session['index']}"
 
     return render(request, "questions.html", context=context)
