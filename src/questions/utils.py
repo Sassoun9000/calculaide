@@ -140,11 +140,13 @@ def result_process(answers):
         total_sub["pac_pr_sub"] = 0
         total_sub["pac_cee_sub"] = 0
         if answers["surface_rampants"]:
-            total_sub["pac_pr_sub"] += PR_AMOUNT[income]["sous_rampants"]
-            total_sub["pac_cee_sub"] += CEE_AMOUNT[income]["sous_rampants"]
+            r_dim = answers["surface_rampants"]
+            total_sub["pac_pr_sub"] += PR_AMOUNT[income]["sous_rampants"] * float(r_dim)
+            total_sub["pac_cee_sub"] += CEE_AMOUNT[income]["sous_rampants"] * float(r_dim)
         if answers["surface_perdus"]:
-            total_sub["pac_pr_sub"] += PR_AMOUNT[income]["combles_perdus"]
-            total_sub["pac_cee_sub"] += CEE_AMOUNT[income]["combles_perdus"]
+            p_dim = answers["surface_perdus"]
+            total_sub["pac_pr_sub"] += PR_AMOUNT[income]["combles_perdus"] * float(p_dim)
+            total_sub["pac_cee_sub"] += CEE_AMOUNT[income]["combles_perdus"] * float(p_dim)
     if "btd" in answers:
         total_sub["btd_pr_sub"] = PR_AMOUNT[income]["thermodynamique"]
         total_sub["btd_cee_sub"] = CEE_AMOUNT[income]["thermodynamique"]
