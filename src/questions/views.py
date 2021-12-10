@@ -45,14 +45,15 @@ def questions(request):
             context['answers'] = request.session['answers']
             return render(request, "results.html", context=context)
 
-        context["form"] = eval(request.session["QPath"][i])
+        step_name = request.session["QPath"][i]
+        context["form"] = eval(step_name)
+        context["form_id"] = f"form_{step_name}"
 
     else:
         request.session["index"] = 0
         context["form"] = ProjectChoices()
+        context["form_id"] = "form_product"
         context["first_question"] = True
         print("Première itération")
-
-    context["form_id"] = f"form_{request.session['index']}"
 
     return render(request, "questions.html", context=context)
