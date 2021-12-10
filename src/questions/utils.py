@@ -4,6 +4,13 @@ QPATH_FORMS = {
     "iso": "SurfaceIso()",
 }
 
+SUB_AMOUNT = {
+    "BLUE": {
+
+    }
+
+}
+
 
 def result_process(answers):
     return 12
