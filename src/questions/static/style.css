@@ -117,14 +117,14 @@ nav #accueil {
     padding: 10px 30px 30px 30px;
 } 
 
-#id_power {
+#id_pv_power {
     display: flex;
     justify-content: center;
     list-style: none;
     margin-bottom: 50px;
 }
 
-#id_power li {
+#id_pv_power li {
     width: 120px;
     height: 120px;
     margin: 0px 10px 0px 0px;
@@ -133,7 +133,7 @@ nav #accueil {
     align-items: center;
 }
 
-#id_power input {
+#id_pv_power input {
     cursor: pointer;
     width: 120px;
     min-width: 120px;
@@ -148,7 +148,7 @@ nav #accueil {
     border-radius: 4px;
 }
 
-#id_power label {
+#id_pv_power label {
     min-width: 0px;
     width: min-content;
     position: relative;
@@ -159,7 +159,7 @@ nav #accueil {
 
 
 
-#id_power input:not(:checked) {
+#id_pv_power input:not(:checked) {
     transition: 0.5s; 
 }
 
@@ -304,11 +304,11 @@ nav #accueil {
     transition: 0.1s;
 }
 
-#id_power, #id_pv_type {
+#id_power, #id_pv_type, #id_pac_type {
     list-style: none;
 }
 
-#id_pv_type {
+#id_pv_type, #id_pac_type {
     display: flex;
     justify-content: center;
     flex-direction: row;
