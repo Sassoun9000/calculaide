@@ -117,6 +117,9 @@ CEE_AMOUNT = {
 
 def result_process(answers):
     total_sub = {}
+    total_sub["total_pr"] = 0
+    total_sub["total_cee"] = 0
+    total_sub["total_sub"] = 0
     income = answers["income_color"]
     if "pv" in answers:
         pv_power = float(answers["pv_power"])
@@ -129,13 +132,20 @@ def result_process(answers):
         else:
             kwc_amount = "pv100"
         total_sub["pv_pr_sub"] = pv_power * PR_AMOUNT[income][kwc_amount]
+        total_sub["pv_cee_sub"] = 0
         if answers["pv_type"] == "hybrid":
             total_sub["pv_pr_sub"] += PR_AMOUNT[income]["pv_hybrid"]
-            total_sub["pv_cee_sub"] = CEE_AMOUNT[income]["pv_hybrid"]
+            total_sub["pv_cee_sub"] += CEE_AMOUNT[income]["pv_hybrid"]
+
+        total_sub["total_pr"] += total_sub["pv_pr_sub"]
+        total_sub["total_cee"] += total_sub["pv_cee_sub"]
     if "pac" in answers:
         pac_type = answers["pac_type"]
         total_sub["pac_pr_sub"] = PR_AMOUNT[income][pac_type]
         total_sub["pac_cee_sub"] = CEE_AMOUNT[income][pac_type]
+
+        total_sub["total_pr"] += total_sub["pac_pr_sub"]
+        total_sub["total_cee"] += total_sub["pac_cee_sub"]
     if "iso" in answers:
         total_sub["iso_pr_sub"] = 0
         total_sub["iso_cee_sub"] = 0
@@ -147,11 +157,22 @@ def result_process(answers):
             p_dim = answers["surface_perdus"]
             total_sub["iso_pr_sub"] += PR_AMOUNT[income]["combles_perdus"] * float(p_dim)
             total_sub["iso_cee_sub"] += CEE_AMOUNT[income]["combles_perdus"] * float(p_dim)
+
+        total_sub["total_pr"] += total_sub["iso_pr_sub"]
+        total_sub["total_cee"] += total_sub["iso_cee_sub"]
     if "btd" in answers:
         total_sub["btd_pr_sub"] = PR_AMOUNT[income]["thermodynamique"]
         total_sub["btd_cee_sub"] = CEE_AMOUNT[income]["thermodynamique"]
+
+        total_sub["total_pr"] += total_sub["btd_pr_sub"]
+        total_sub["total_cee"] += total_sub["btd_cee_sub"]
     if "cesol" in answers:
         total_sub["cesol_pr_sub"] = PR_AMOUNT[income]["ce_solaire"]
         total_sub["cesol_cee_sub"] = CEE_AMOUNT[income]["ce_solaire"]
 
+        total_sub["total_pr"] += total_sub["cesol_pr_sub"]
+        total_sub["total_cee"] += total_sub["cesol_cee_sub"]
+
+    print(total_sub["total_sub"], total_sub["total_pr"], total_sub["total_cee"])
+    total_sub["total_sub"] = total_sub["total_pr"] + total_sub["total_cee"]
     return total_sub
