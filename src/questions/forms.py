@@ -43,36 +43,35 @@ class ProjectChoices(forms.Form):
 
 
 PV_POWER_LEVEL = [
-    ("three", "3"),
-    ("four_five", "4,5"),
-    ("six", "6"),
-    ("seven_five", "7,5"),
-    ("nine", "9"),
-    ("ten_five", "10,5"),
-    ("twelve", "12")
+    ("3", "3"),
+    ("4.5", "4,5"),
+    ("6", "6"),
+    ("9", "9"),
+    ("12", "12"),
+    ("15", "15"),
 ]
 PV_TYPE = [("classic", ""), ("hybrid", "")]
 
 
 class PVCharacteristics(forms.Form):
-    power = forms.ChoiceField(choices=PV_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=MyRadioSelect)
+    pv_power = forms.ChoiceField(choices=PV_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=MyRadioSelect)
     pv_type = forms.ChoiceField(choices=PV_TYPE, label="Type de panneaux", widget=MyRadioSelect)
 
 
 PAC_POWER_LEVEL = [
-    ("four", "4"),
-    ("six", "6"),
-    ("eight", "8"),
-    ("eleven", "11"),
-    ("fourteen", "14"),
-    ("sixteen", "16")
+    ("4", "4"),
+    ("6", "6"),
+    ("8", "8"),
+    ("11", "11"),
+    ("14", "14"),
+    ("16", "16")
 ]
-PAC_TYPE = [("airair", ""), ("aireau", "")]
+PAC_TYPE = [("pac_air", ""), ("pac_eau", "")]
 
 
 class PACCharacteristics(forms.Form):
     power = forms.ChoiceField(choices=PAC_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=MyRadioSelect)
-    pv_type = forms.ChoiceField(choices=PAC_TYPE, label="Type de panneaux", widget=MyRadioSelect)
+    pac_type = forms.ChoiceField(choices=PAC_TYPE, label="Type de PAC", widget=MyRadioSelect)
 
 
 class SurfaceIso(forms.Form):
@@ -94,7 +93,7 @@ COLOR_CODES = [
     ("blue", "14 879 €"),
     ("yellow", "19 074 €"),
     ("purple", "29 148 €"),
-    ("rose", "> 29 148 €"),
+    ("pink", "> 29 148 €"),
 ]
 
 
