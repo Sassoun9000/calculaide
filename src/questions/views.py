@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 from .forms import *
 
-from .utils import QPATH_FORMS, result_process
+from .utils import QPATH_FORMS, COLOR_AMOUNTS, result_process
 
 
 def index(request):
@@ -48,6 +48,9 @@ def questions(request):
         step_name = request.session["QPath"][i]
         context["form"] = eval(step_name)
         context["form_id"] = f"form_{step_name}".replace("()", "")
+
+        if context["form_id"] == "form_ColorCategory":
+            context["color_amounts"] = COLOR_AMOUNTS
 
     else:
         request.session["index"] = 0
