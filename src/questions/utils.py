@@ -132,9 +132,10 @@ def result_process(answers):
         else:
             kwc_amount = "pv100"
         total_sub["pv_pr_sub"] = pv_power * PR_AMOUNT[income][kwc_amount]
+        total_sub["pv_cee_sub"] = 0
         if answers["pv_type"] == "hybrid":
             total_sub["pv_pr_sub"] += PR_AMOUNT[income]["pv_hybrid"]
-            total_sub["pv_cee_sub"] = CEE_AMOUNT[income]["pv_hybrid"]
+            total_sub["pv_cee_sub"] += CEE_AMOUNT[income]["pv_hybrid"]
 
         total_sub["total_pr"] += total_sub["pv_pr_sub"]
         total_sub["total_cee"] += total_sub["pv_cee_sub"]
@@ -172,5 +173,6 @@ def result_process(answers):
         total_sub["total_pr"] += total_sub["cesol_pr_sub"]
         total_sub["total_cee"] += total_sub["cesol_cee_sub"]
 
-    total_sub["total_sub"] = total_sub["total_pr"] + total_sub["pv_cee_sub"]
+    print(total_sub["total_sub"], total_sub["total_pr"], total_sub["total_cee"])
+    total_sub["total_sub"] = total_sub["total_pr"] + total_sub["total_cee"]
     return total_sub
