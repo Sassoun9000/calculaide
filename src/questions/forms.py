@@ -1,6 +1,10 @@
 from django import forms
 
 
+class MyRadioSelect(forms.RadioSelect):
+    option_template_name = "widgets/radio_option.html"
+
+
 class BaseForm(forms.Form):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('label_suffix', '')
@@ -31,8 +35,8 @@ PV_TYPE = [("classic", ""), ("hybrid", "")]
 
 
 class PVCharacteristics(forms.Form):
-    power = forms.ChoiceField(choices=PV_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=forms.RadioSelect)
-    pv_type = forms.ChoiceField(choices=PV_TYPE, label="Type de panneaux", widget=forms.RadioSelect)
+    power = forms.ChoiceField(choices=PV_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=MyRadioSelect)
+    pv_type = forms.ChoiceField(choices=PV_TYPE, label="Type de panneaux", widget=MyRadioSelect)
 
 
 PAC_POWER_LEVEL = [
@@ -47,8 +51,8 @@ PAC_TYPE = [("airair", ""), ("aireau", "")]
 
 
 class PACCharacteristics(forms.Form):
-    power = forms.ChoiceField(choices=PAC_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=forms.RadioSelect)
-    pv_type = forms.ChoiceField(choices=PAC_TYPE, label="Type de panneaux", widget=forms.RadioSelect)
+    power = forms.ChoiceField(choices=PAC_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=MyRadioSelect)
+    pv_type = forms.ChoiceField(choices=PAC_TYPE, label="Type de panneaux", widget=MyRadioSelect)
 
 
 class SurfaceIso(forms.Form):
@@ -78,6 +82,6 @@ class ColorCategory(forms.Form):
     family_members = forms.ChoiceField(
         choices=INMATES_NUMBER,
         label="Nombre de personnes composant le foyer fiscal",
-        widget=forms.RadioSelect
+        widget=MyRadioSelect
     )
-    income_color = forms.ChoiceField(choices=COLOR_CODES, label="Catégorie", widget=forms.RadioSelect)
+    income_color = forms.ChoiceField(choices=COLOR_CODES, label="Catégorie", widget=MyRadioSelect)
