@@ -15,11 +15,31 @@ forms.Form = BaseForm
 
 
 class ProjectChoices(forms.Form):
-    pv = forms.BooleanField(required=False, label="Panneaux photovoltaïques")
-    pac = forms.BooleanField(required=False, label="Pompe à chaleur")
-    iso = forms.BooleanField(required=False, label="Isolation des combles")
-    btd = forms.BooleanField(required=False, label="Ballon thermodynamique")
-    cesol = forms.BooleanField(required=False, label="Chauffe-eau solaire")
+    pv = forms.BooleanField(
+        required=False,
+        label="Panneaux photovoltaïques",
+        widget=forms.CheckboxInput(attrs={'class': 'zob'})
+    )
+    pac = forms.BooleanField(
+        required=False,
+        label="Pompe à chaleur",
+        widget=forms.CheckboxInput(attrs={'class': 'zob'})
+    )
+    iso = forms.BooleanField(
+        required=False,
+        label="Isolation des combles",
+        widget=forms.CheckboxInput(attrs={'class': 'zob'})
+    )
+    btd = forms.BooleanField(
+        required=False,
+        label="Ballon thermodynamique",
+        widget=forms.CheckboxInput(attrs={'class': 'zob'})
+    )
+    cesol = forms.BooleanField(
+        required=False,
+        label="Chauffe-eau solaire",
+        widget=forms.CheckboxInput(attrs={'class': 'zob'})
+    )
 
 
 PV_POWER_LEVEL = [
