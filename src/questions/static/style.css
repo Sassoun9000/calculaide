@@ -3,6 +3,10 @@
     src: url(../../../../Raleway/static/Raleway-Black.ttf) format(ttf)
 }
 
+:root {
+    --checked-color: rgb(25, 105, 255);
+}
+
 body {
     background: linear-gradient(60.4deg, #55B995 29.29%, #00A6B8 98.36%);
     font-family: "Raleway-Black";
@@ -67,53 +71,92 @@ nav #accueil {
 
 
 .form {
-    margin: auto;
+    margin: auto
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 65%;
 }
 
-#form_0 {
+#form_product {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
 
-p {
+#form_product p {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    margin: auto;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 270px;
+}
+
+#form_product label {
+    position: relative;
+    right: 90%;
+    top: 80px;
+    min-width: 235px;
+    max-width: 240px;
+    text-align: center;
+    color: rgb(54, 54, 54);
 }
 
 #id_pv {
     background-image: url(./media/pv_logo.png);
     background-repeat: no-repeat;
     background-size: contain;
+    padding: 0px 10px 35px 17px;
+    background-origin: content-box;
 } 
 
 #id_pac {
     background-image: url(./media/pac_logo.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-origin: content-box;
+    padding: 10px 30px 30px 30px;
 } 
 
-
-#id_power li {
-    width: 10%;
-    margin: auto;
+#id_power {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 50px;
 }
 
-#id_power label {
-    width: 5px;
-    min-width: 5px;
+#id_power li {
+    width: 120px;
+    height: 120px;
+    margin: 0px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #id_power input {
-    margin: 5px 30px 0px 0px;
+    cursor: pointer;
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    min-height: 120px;
+    font-size: 28px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background: rgba(185, 236, 211, 0.91);
+    border-radius: 4px;
 }
+
+#id_power label {
+    min-width: 0px;
+    width: min-content;
+    position: relative;
+    bottom: 62%;
+    left: 3px;
+    color:rgb(54, 54, 54);
+}
+
 
 
 #id_power input:not(:checked) {
@@ -121,77 +164,75 @@ p {
 }
 
 
-#color, #products {
-    max-width: 100%;
-    margin: auto;
-}
-
-#color p {
+#id_family_members {
     display: flex;
     justify-content: center;
+    list-style: none;
+    margin-bottom: 50px;
 }
 
-#color ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+#id_family_members li {
+    width: 120px;
+    height: 120px;
+    margin: 0px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#id_family_members label {
+    min-width: 0px;
+    width: min-content;
+    position: relative;
+    bottom: 62%;
+    left: 3px;
+    color:rgb(54, 54, 54);
+}
+
+
+#id_family_members input {
+    cursor: pointer;
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    min-height: 120px;
+    font-size: 28px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background: rgba(185, 236, 211, 0.91);
+    border-radius: 4px;
+}
+
+#id_family_members input:checked {
+    border: solid 4px var(--checked-color);
+    box-shadow: 0px 0px 2px 0px rgb(71, 71, 71);
+    scale: 105%;
+    transition: 0.2s; 
+}
+
+#id_income_color {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     list-style: none;
     width: auto;
 }
 
-#color #id_family_members {
+#id_income_color li {
     display: flex;
-    justify-content: space-evenly;
-    transform: translate(-5%);
-}
-
-#color label {
-    min-width: 0px;
-    display: flex;
-    flex-direction: row;
-}
-
-#color li {
-    width: 0px;
-}
-
-#color #id_family_members input {
-    min-width: 36px;
-    margin: 0px 10px 0px 0px;;
-}
-
-#color #id_family_members input:checked {
-    border: solid 1.5px rgb(44, 118, 216);
-    box-shadow: 0px 0px 2px 0px rgb(71, 71, 71);
-    scale: 115%;
-    transition: 0.2s; 
-}
-
-#color #id_income_color {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-#color #id_income_color li label {
-    min-width: 0px;
-    width: max-content;
-}
-
-#color #id_income_color li label input {
-    width: 200px;
+#id_income_color li label {
     min-width: 200px;
-    height: 200px;
-    margin: 0px 0px 0px 0px;
-    z-index: -1;
-}
-
-#color #id_income_color li {
-    width: 200px;
-    min-width: 200px;
-    height: 200px;
-    margin: 10px 10px 10px 10px;
+    width: min-content;
     position: relative;
-    left: -10%;
+    bottom: 47%;
+    left: 1%;
 }
 
 #id_income_color_0 {
@@ -215,10 +256,10 @@ p {
 }
 
 #id_income_color_0:checked, #id_income_color_1:checked, #id_income_color_2:checked, #id_income_color_3:checked {
-    scale: 107%;
+    scale: 105%;
     border: solid 3px rgb(255, 255, 255);
-    box-shadow: 0px 0px 2px 0px rgb(71, 71, 71);
-    transition: 0.3s;
+    box-shadow: 0px 0px 3px 1px rgb(71, 71, 71);
+    transition: 0.2s;
 }
 
 #products p {
@@ -241,7 +282,7 @@ p {
     text-align: center;
 }
 
-#id_pv_type #id_pv_type_0 {
+#id_pv_type_0 {
     background-image: url(./media/bckgPVC.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -249,7 +290,7 @@ p {
     width: 250px;
 }
 
-#id_pv_type #id_pv_type_1 {
+#id_pv_type_1 {
     background-image: url(./media/bckgPVH.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -257,10 +298,10 @@ p {
     width: 250px;
 }
 
-#id_pv_type #id_pv_type_0:checked, #id_pv_type_1:checked {
-    border: 3px solid rgb(44, 118, 216);
+#id_pv_type_0:checked, #id_pv_type_1:checked {
+    border: 5px solid rgb(27, 82, 153);
     scale: 103%;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
 #id_power, #id_pv_type {
@@ -280,7 +321,6 @@ p {
 
 input[type="checkbox"], input[type="radio"] {
     cursor: pointer;
-    margin-right: 50px;
     width: 250px;
     min-width: 250px;
     height: 250px;
@@ -311,7 +351,6 @@ input[type="checkbox"]:not(:checked), input[type="radio"]:not(:checked) {
 }
 
 label {
-    min-width: 350px;
     display: block;
     text-align: center;
     font-family: "Raleway-Black";
