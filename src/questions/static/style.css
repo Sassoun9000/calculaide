@@ -19,6 +19,8 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 20vh;
+    margin-bottom: 50px;
 }
 
 nav a {
@@ -42,13 +44,14 @@ nav #accueil {
 #logo {
     display: flex;
     justify-content: center;
-    margin-top: 2%;
     transform: translate(12%);
+    margin-top: 10px
+    scale: 100%;
 }
 
 #div_btn_simu {
     text-align: center;
-    margin-top: 7%;
+    margin-top: 15%;
 }
 
 #btn_simu {
@@ -74,10 +77,18 @@ nav #accueil {
 
 
 .form {
-    margin: auto
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+#form_nav {
+    position: absolute;
+    bottom: 100px;
+    transform: translate(200px);
 }
 
 #form_product {
@@ -92,6 +103,32 @@ nav #accueil {
     justify-content: flex-end;
     align-items: center;
     max-width: 270px;
+}
+
+#form_SurfaceIso p {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 600px;
+    width: 600px;
+    margin-bottom: 30px;
+}
+
+#form_SurfaceIso label {
+    text-align: left;
+    width: 200px;
+    min-width: 200px;
+}
+
+#form_SurfaceIso input {
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: textfield;
+    outline: 0;
+    background: rgba(185, 236, 211, 0.91);
+    border-radius: 4px;
+    font-size: 24px;
 }
 
 #form_product label {
@@ -120,14 +157,14 @@ nav #accueil {
     padding: 10px 30px 30px 30px;
 } 
 
-#id_pv_power {
+#id_pv_power, #id_power {
     display: flex;
     justify-content: center;
     list-style: none;
     margin-bottom: 50px;
 }
 
-#id_pv_power li {
+#id_pv_power li, #id_power li {
     width: 120px;
     height: 120px;
     margin: 0px 10px 0px 0px;
@@ -136,7 +173,7 @@ nav #accueil {
     align-items: center;
 }
 
-#id_pv_power input {
+#id_pv_power input, #id_power input {
     cursor: pointer;
     width: 120px;
     min-width: 120px;
@@ -151,7 +188,7 @@ nav #accueil {
     border-radius: 4px;
 }
 
-#id_pv_power label {
+#id_pv_power label, #id_power label {
     min-width: 0px;
     width: min-content;
     position: relative;
@@ -160,9 +197,7 @@ nav #accueil {
     color:rgb(54, 54, 54);
 }
 
-
-
-#id_pv_power input:not(:checked) {
+#id_pv_power input:not(:checked), #id_power input:not(:checked) {
     transition: 0.5s; 
 }
 
@@ -301,7 +336,29 @@ nav #accueil {
     width: 250px;
 }
 
-#id_pv_type_0:checked, #id_pv_type_1:checked {
+#id_pac_type_0 {
+    background-image: url(./media/air.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    padding: 10px 30px 30px 30px;
+    height: 250px;
+    width: 250px;
+}
+
+#id_pac_type_1 {
+    background-image: url(./media/water.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    padding: 10px 30px 30px 30px;
+    height: 250px;
+    width: 250px;
+}
+
+#id_pv_type_0:checked, #id_pv_type_1:checked, #id_pac_type_0:checked, #id_pac_type_1:checked {
     border: 5px solid rgb(27, 82, 153);
     scale: 103%;
     transition: 0.1s;
