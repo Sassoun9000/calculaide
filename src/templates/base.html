@@ -20,9 +20,10 @@
 
     <nav>
 
+      <div></div>
+
       <div  id="logo">
-        <a href="{% url 'index' %}">
-          <img src="/static/media/logo.png" alt="logo photen">
+        <a id="accueil_logo" href="{% url 'index' %}">
         </a>
       </div>
 
@@ -34,9 +35,11 @@
 
     </nav>
 
+    <div id="centerme">
+      {% block content %}
+      {% endblock %}
+    </div>
 
-    {% block content %}
-    {% endblock %}
 
     <script src="../questions/js/index.js">
 

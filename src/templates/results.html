@@ -7,55 +7,142 @@
 {% block content %}
     <h1>RÉSULTATS</h1>
 
-    {{results}}
+    <!-- {{answers}}
+    {{results}} -->
+    <div id="results_list">
+        <p>Pour votre projet :</p>
+        <ul>
 
-    {{answers}}
+            {% if answers.pv %}
+                <li>
+                    Panneaux photovoltaïques 
+                    {% if not answers.pv_type == "classic" %}
+                        {{answers.pv_type}} : {{ answers.pv_power }} kWc
+                    {% else %}
+                        : {{ answers.pv_power }} kWc
+                    {% endif %}
+                </li>
+            {% endif %}
+
+            {% if answers.pac %}
+                <li>
+                    Pompe à chaleur 
+                    {% if answers.pac_type == "pac_eau" %}
+                        air-eau : {{ answers.power }} kW
+                    {% endif %}
+                </li>
+            {% endif %}
+
+            {% if answers.iso %}
+
+                {% if answers.surface_rampants %}
+                    <li>
+                        Isolation sous rampants de {{ answers.surface_rampants }} m²
+                    </li>
+                {% endif %}
+
+                {% if answers.surface_perdus %}
+                    <li>
+                        Isolation combles perdues de {{ answers.surface_perdus }} m²
+                    </li>
+                {% endif %}
+
+            {% endif %}
+
+            {% if answers.btd %}
+                <li>
+                    Ballon thermodynamique
+                </li>
+            {% endif %}
+
+            {% if answers.cesol %}
+                <li>
+                    Chauffe-eau solaire
+                </li>
+            {% endif %}
+            
+        </ul>
+    </div>
+    
+    <!-- PRIME EN BAS -->
 
     {% if answers.pv %}
+
         <h2>Primes PV</h2>
-    {% if results.pv_pr_sub %}
-        <h3>Prime rénov {{ results.pv_pr_sub }}</h3>
+
+        {% if results.pv_pr_sub %}
+            <h3>Prime rénov {{ results.pv_pr_sub }}</h3>
+        {% endif %}
+
+        {% if results.pv_cee_sub %}
+            <h3>CEE {{ results.pv_cee_sub }}</h3>
+        {% endif %}
+
     {% endif %}
-    {% if results.pv_cee_sub %}
-        <h3>CEE {{ results.pv_cee_sub }}</h3>
-    {% endif %}
-    {% endif %}
+    
+
     {% if answers.pac %}
+
         <h2>Primes PAC</h2>
-    {% if results.pac_pr_sub %}
-        <h3>Prime rénov {{ results.pac_pr_sub }}</h3>
+
+        {% if results.pac_pr_sub %}
+            <h3>Prime rénov {{ results.pac_pr_sub }}</h3>
+        {% endif %}
+
+        {% if results.pac_pr_sub %}
+            <h3>CEE {{ results.pac_cee_sub }}</h3>
+        {% endif %}
+
     {% endif %}
-    {% if results.pac_pr_sub %}
-        <h3>CEE {{ results.pac_cee_sub }}</h3>
-    {% endif %}
-    {% endif %}
+
+
     {% if answers.iso %}
-        <h2>Primes Isolation</h2>
-    {% if results.iso_pr_sub %}
-        <h3>Prime rénov {{ results.iso_pr_sub }}</h3>
+
+            <h2>Primes Isolation</h2>
+
+        {% if results.iso_pr_sub %}
+            <h3>Prime rénov {{ results.iso_pr_sub }}</h3>
+        {% endif %}
+
+        {% if results.iso_pr_sub %}
+            <h3>CEE {{ results.iso_cee_sub }}</h3>
+        {% endif %}
+
     {% endif %}
-    {% if results.iso_pr_sub %}
-        <h3>CEE {{ results.iso_cee_sub }}</h3>
-    {% endif %}
-    {% endif %}
+
+
     {% if answers.btd %}
-        <h2>Primes Ballon thermodynamique</h2>
-    {% if results.btd_pr_sub %}
-        <h3>Prime rénov {{ results.btd_pr_sub }}</h3>
+
+            <h2>Primes Ballon thermodynamique</h2>
+
+        {% if results.btd_pr_sub %}
+            <h3>Prime rénov {{ results.btd_pr_sub }}</h3>
+        {% endif %}
+
+        {% if results.btd_pr_sub %}
+            <h3>CEE {{ results.btd_cee_sub }}</h3>
+        {% endif %}
+
     {% endif %}
-    {% if results.btd_pr_sub %}
-        <h3>CEE {{ results.btd_cee_sub }}</h3>
-    {% endif %}
-    {% endif %}
+
+
     {% if answers.cesol %}
-        <h2>Primes Chauffe-eau solaire</h2>
-    {% if results.cesol_pr_sub %}
-        <h3>Prime rénov {{ results.cesol_pr_sub }}</h3>
+
+            <h2>Primes Chauffe-eau solaire</h2>
+
+        {% if results.cesol_pr_sub %}
+            <h3>Prime rénov {{ results.cesol_pr_sub }}</h3>
+        {% endif %}
+
+        {% if results.cesol_pr_sub %}
+            <h3>CEE {{ results.cesol_cee_sub }}</h3>
+        {% endif %}
+
     {% endif %}
-    {% if results.cesol_pr_sub %}
-        <h3>CEE {{ results.cesol_cee_sub }}</h3>
-    {% endif %}
-    {% endif %}
+
+    <a id="terminer" href="{% url 'index' %}">
+        Terminer
+    </a>
 
 
 {% endblock %}
