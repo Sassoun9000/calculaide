@@ -100,6 +100,7 @@ nav #accueil {
 }
 
 #form_nav {
+    margin-top: 10%;
     margin-bottom: 10%;
 }
 
@@ -107,7 +108,7 @@ nav #accueil {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 7%;
 }
 
 #form_product p {
@@ -147,11 +148,15 @@ nav #accueil {
 
 #form_product label {
     position: relative;
-    right: 90%;
-    top: 80px;
-    min-width: 235px;
-    max-width: 240px;
-    text-align: center;
+    right: 94%;
+    top: 0px;
+    min-width: 250px;
+    max-width: 250px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     color: rgb(54, 54, 54);
 }
 
@@ -160,6 +165,10 @@ nav #accueil {
     background-size: contain;
     background-origin: content-box;
     padding: 30px;
+}
+
+#form_product input:checked {
+    z-index: -1;
 }
 
 #id_pv {
@@ -506,8 +515,6 @@ h1 {
 
 #results_list {
     margin: auto;
-    width: 70%;
-    max-width: 70%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -544,17 +551,17 @@ h1 {
 }
 
 .primes_values {
-    width: 100px;
+    width: 140px;
     text-align: center;
 }
 
 .project_item {
-    width: 300px;
+    width: 380px;
 }
 
 #votre_projet {
-    width: 250px;
-    padding-left: 50px;
+    width: 290px;
+    padding-left: 90px;
 }
 
 #results_total {
