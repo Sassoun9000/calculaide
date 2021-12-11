@@ -100,12 +100,14 @@ nav #accueil {
 }
 
 #form_nav {
+    margin-bottom: 10%;
 }
 
 #form_product {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 15%;
 }
 
 #form_product p {
@@ -113,6 +115,7 @@ nav #accueil {
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
+    margin: 5px;
     max-width: 270px;
 }
 
@@ -152,21 +155,32 @@ nav #accueil {
     color: rgb(54, 54, 54);
 }
 
-#id_pv {
-    background-image: url(./media/pv_logo.png);
+#form_product input {
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 0px 10px 35px 17px;
     background-origin: content-box;
+    padding: 30px;
+}
+
+#id_pv {
+    background-image: url(./media/pv_logo.png);
 } 
 
 #id_pac {
     background-image: url(./media/pac_logo.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-origin: content-box;
-    padding: 10px 30px 30px 30px;
 } 
+
+#id_iso {
+    background-image: url(./media/iso_logo.png);
+}
+
+#id_btd {
+    background-image: url(./media/btd_logo.png);
+}
+
+#id_cesol {
+    background-image: url(./media/ces_logo.png);
+}
 
 #id_pv_power, #id_power {
     display: flex;
@@ -306,7 +320,7 @@ nav #accueil {
 
 #id_income_color_0:checked, #id_income_color_1:checked, #id_income_color_2:checked, #id_income_color_3:checked {
     scale: 105%;
-    border: solid 3px rgb(255, 255, 255);
+    border: solid 5px rgb(255, 255, 255);
     box-shadow: 0px 0px 3px 1px rgb(71, 71, 71);
     transition: 0.2s;
 }
@@ -385,6 +399,15 @@ nav #accueil {
     flex-direction: row;
 }
 
+#id_pac_type li label {
+    min-width: 200px;
+    width: min-content;
+    left: 12%;
+    color: rgb(54, 54, 54);
+    position: relative;
+    bottom: 20%;
+}
+
 #pv_logement p label {
     display: block;
     text-align: center;
@@ -405,16 +428,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 input[type="checkbox"]:checked, input[type="radio"]:checked {
-    background-image: url("/static/media/blue-check-mark.png");
-    background-repeat: no-repeat;
-    background-size: 33px;
-    background-position-y: 3px;
-    background-position-x: 2px;
-    background: rgba(199, 251, 255, 0.91);;
     border: solid 5px rgb(27, 82, 153);
     box-shadow: 0px 0px 2px 0px rgb(71, 71, 71);
     scale: 102%;
-    transition: 0.1s; 
+    transition: 0.1s;
 }
 
 input[type="checkbox"]:not(:checked), input[type="radio"]:not(:checked) {

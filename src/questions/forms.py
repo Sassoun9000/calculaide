@@ -27,7 +27,7 @@ class ProjectChoices(forms.Form):
     )
     iso = forms.BooleanField(
         required=False,
-        label="Isolation des combles",
+        label="Isolation",
         widget=forms.CheckboxInput(attrs={'class': 'zob'})
     )
     btd = forms.BooleanField(
@@ -66,7 +66,7 @@ PAC_POWER_LEVEL = [
     ("14", "14"),
     ("16", "16")
 ]
-PAC_TYPE = [("pac_air", ""), ("pac_eau", "")]
+PAC_TYPE = [("pac_air", "Air-Air"), ("pac_eau", "Air-Eau")]
 
 
 class PACCharacteristics(forms.Form):
