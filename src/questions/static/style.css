@@ -100,9 +100,6 @@ nav #accueil {
 }
 
 #form_nav {
-    position: absolute;
-    bottom: 100px;
-    transform: translate(200px);
 }
 
 #form_product {
@@ -444,7 +441,7 @@ label {
     color: white;
     min-width: 100px;
     width: 150px;
-    margin: 50px auto auto auto;
+    margin: auto;
     padding: 10px;
     font-family: Raleway;
     font-style: normal;
@@ -461,7 +458,7 @@ label {
 }
 
 #terminer {
-    background: #0095B6;
+    background: #00B65E;
     border: 1px solid rgba(255, 255, 255, 0.46);
     box-shadow: 0px 0px 62px -5px rgba(0, 0, 0, 0.25), inset 0px 0px 5px 4px rgba(255, 255, 255, 0.25);
     border-radius: 8px;
@@ -487,25 +484,72 @@ label {
 h1 {
     text-align: center;
     color: white;
-}
-
-h2 {
-    color: white;
-}
-
-h3 {
-    margin-left: 40px;
-    color: white;
+    margin: 20px 0px 50px 0px;
 }
 
 #results_list {
     margin: auto;
-    width: 50%;
-    max-width: 500px;
+    width: 70%;
+    max-width: 70%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     color: white;
+}
+
+#results_data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#results_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#results_data ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: Opx;
+    padding: 0px;
+}
+
+#results_data li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: max-content;
+}
+
+.primes_values {
+    width: 100px;
+    text-align: center;
+}
+
+.project_item {
+    width: 300px;
+}
+
+#votre_projet {
+    width: 250px;
+    padding-left: 50px;
+}
+
+#results_total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.total_text {
+    margin-top: 70px;
+    font-size: 30px;
 }
 
 .next:active, .previous:active {

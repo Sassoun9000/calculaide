@@ -12,26 +12,60 @@
         <!-- {{answers}}
         {{results}} -->
 
-            <p>Pour votre projet :</p>
+        <div id="results_data">
+
+            <div id="results_title">
+
+                <div id="votre_projet">
+                    Votre Projet
+                </div>
+
+                <div class="primes_values">
+                    MaPrimeRénov'
+                </div>
+
+                <div class="primes_values">
+                    CEE
+                </div>
+
+            </div>
+            
+
             <ul>
 
                 {% if answers.pv %}
                     <li>
-                        Panneaux photovoltaïques 
-                        {% if not answers.pv_type == "classic" %}
-                            {{answers.pv_type}} : {{ answers.pv_power }} kWc
-                        {% else %}
-                            : {{ answers.pv_power }} kWc
-                        {% endif %}
+                        <div class="project_item">
+                            Panneaux photovoltaïques 
+                            {% if not answers.pv_type == "classic" %}
+                                {{answers.pv_type}} de {{ answers.pv_power }} kWc
+                            {% else %}
+                                de {{ answers.pv_power }} kWc
+                            {% endif %}
+                        </div>
+                        <div class="primes_values">
+                            {{ results.pv_pr_sub }} €
+                        </div>
+                        <div class="primes_values">
+                            {{ results.pv_cee_sub }} €
+                        </div>
                     </li>
                 {% endif %}
 
                 {% if answers.pac %}
                     <li>
-                        Pompe à chaleur 
-                        {% if answers.pac_type == "pac_eau" %}
-                            air-eau : {{ answers.power }} kW
-                        {% endif %}
+                        <div class="project_item">
+                            Pompe à chaleur 
+                            {% if answers.pac_type == "pac_eau" %}
+                                air-eau de {{ answers.power }} kW
+                            {% endif %}
+                        </div>
+                        <div class="primes_values">
+                            {{ results.pac_pr_sub }} €
+                        </div>
+                        <div class="primes_values">
+                            {{ results.pac_cee_sub }} €
+                        </div>
                     </li>
                 {% endif %}
 
@@ -40,12 +74,18 @@
                     {% if answers.surface_rampants %}
                         <li>
                             Isolation sous rampants de {{ answers.surface_rampants }} m²
+                            -----------
+                            {{ results.iso_pr_sub }} €
+                            -----------
+                            {{ results.iso_cee_sub }} €
                         </li>
-                    {% endif %}
-
-                    {% if answers.surface_perdus %}
+                    {% elif answers.surface_perdus %}
                         <li>
                             Isolation combles perdues de {{ answers.surface_perdus }} m²
+                        </li>
+                    {% else %}
+                        <li>
+                            Isolation {{ answers.surface_rampants }} m² sous rampants, {{ answers.surface_perdus }} m² combles perdues
                         </li>
                     {% endif %}
 
@@ -53,93 +93,43 @@
 
                 {% if answers.btd %}
                     <li>
-                        Ballon thermodynamique
+                        <div class="project_item">
+                            Ballon thermodynamique
+                        </div>
+                        <div class="primes_values">
+                            {{ results.btd_pr_sub }} €
+                        </div>
+                        <div class="primes_values">
+                            {{ results.btd_cee_sub }} €
+                        </div>
                     </li>
                 {% endif %}
 
                 {% if answers.cesol %}
                     <li>
-                        Chauffe-eau solaire
+                        <div class="project_item">
+                            Chauffe-eau solaire   
+                        </div>
+                        <div class="primes_values">
+                            {{ results.cesol_pr_sub }} €
+                        </div>
+                        <div class="primes_values">
+                            {{ results.cesol_cee_sub }} €
+                        </div>
                     </li>
                 {% endif %}
-                
+            
             </ul>
-        
-        <!-- PRIME EN BAS -->
 
-        {% if answers.pv %}
+        </div>
 
-            <h2>Primes PV</h2>
+        <div id="results_total">
 
-            {% if results.pv_pr_sub %}
-                <h3>Prime rénov {{ results.pv_pr_sub }}</h3>
-            {% endif %}
+            <div class="total_text">
+                TOTAL DES AIDES  =  {{ results.total_sub }} €
+            </div>
 
-            {% if results.pv_cee_sub %}
-                <h3>CEE {{ results.pv_cee_sub }}</h3>
-            {% endif %}
-
-        {% endif %}
-        
-
-        {% if answers.pac %}
-
-            <h2>Primes PAC</h2>
-
-            {% if results.pac_pr_sub %}
-                <h3>Prime rénov {{ results.pac_pr_sub }}</h3>
-            {% endif %}
-
-            {% if results.pac_pr_sub %}
-                <h3>CEE {{ results.pac_cee_sub }}</h3>
-            {% endif %}
-
-        {% endif %}
-
-
-        {% if answers.iso %}
-
-                <h2>Primes Isolation</h2>
-
-            {% if results.iso_pr_sub %}
-                <h3>Prime rénov {{ results.iso_pr_sub }}</h3>
-            {% endif %}
-
-            {% if results.iso_pr_sub %}
-                <h3>CEE {{ results.iso_cee_sub }}</h3>
-            {% endif %}
-
-        {% endif %}
-
-
-        {% if answers.btd %}
-
-                <h2>Primes Ballon thermodynamique</h2>
-
-            {% if results.btd_pr_sub %}
-                <h3>Prime rénov {{ results.btd_pr_sub }}</h3>
-            {% endif %}
-
-            {% if results.btd_pr_sub %}
-                <h3>CEE {{ results.btd_cee_sub }}</h3>
-            {% endif %}
-
-        {% endif %}
-
-
-        {% if answers.cesol %}
-
-                <h2>Primes Chauffe-eau solaire</h2>
-
-            {% if results.cesol_pr_sub %}
-                <h3>Prime rénov {{ results.cesol_pr_sub }}</h3>
-            {% endif %}
-
-            {% if results.cesol_pr_sub %}
-                <h3>CEE {{ results.cesol_cee_sub }}</h3>
-            {% endif %}
-
-        {% endif %}
+        </div> 
 
     </div>
 
@@ -147,9 +137,7 @@
         Terminer
     </a>
 
-    {{ results.total_pr }}
-    {{ results.total_cee }}
-    {{ results.total_sub }}
+
 
 
 {% endblock %}
