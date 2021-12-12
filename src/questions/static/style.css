@@ -101,7 +101,8 @@ nav #accueil {
 
 #form_nav {
     position: relative;
-    transform: translate(0px);
+    margin-top: 50px;
+    bottom: 55px;
 }
 
 #form_product {
@@ -119,6 +120,10 @@ nav #accueil {
     align-items: center;
     margin: 5px;
     max-width: 270px;
+}
+
+#form_SurfaceIso {
+    margin-bottom: 100px;
 }
 
 #form_SurfaceIso p {
@@ -403,6 +408,10 @@ nav #accueil {
     transition: 0.1s;
 }
 
+#id_pv_type {
+    margin-bottom: 70px;
+}
+
 #id_power, #id_pv_type, #id_pac_type {
     list-style: none;
 }
@@ -588,6 +597,6 @@ h1 {
 
 .previous-form input {
     position: relative;
-    bottom: 55px;
+    bottom: 110px;
     transform: translateX(-130px);
 }
