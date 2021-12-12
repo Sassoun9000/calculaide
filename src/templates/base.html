@@ -53,9 +53,9 @@
         eight: ["48 229 €", "61 813 €", "95 313 €", "> 95 313 €"],
       }
 
-      function suivantBtn() {
-        document.getElementById("form_nav").style.transform = "translate(130px)";
-      }
+      //function suivantBtn() {
+        //document.getElementById("form_nav").style.transform = "translate(130px)";
+      //}
 
       function updatePrime1() {
         document.getElementsByTagName("label")[10].innerText = aides.one[0]
@@ -113,8 +113,6 @@
         document.getElementsByTagName("label")[13].innerText = aides.eight[3]
       }
 
-      document.forms[1].addEventListener("load", suivantBtn())
-
       document.getElementById("id_family_members_0").addEventListener("click", function() {updatePrime1()})
       document.getElementById("id_family_members_1").addEventListener("click", function() {updatePrime2()})
       document.getElementById("id_family_members_2").addEventListener("click", function() {updatePrime3()})
@@ -123,6 +121,8 @@
       document.getElementById("id_family_members_5").addEventListener("click", function() {updatePrime6()})
       document.getElementById("id_family_members_6").addEventListener("click", function() {updatePrime7()})
       document.getElementById("id_family_members_7").addEventListener("click", function() {updatePrime8()})
+
+      //document.forms[1].addEventListener("load", suivantBtn()) //régler cette ligne quand forms[1] n'est PAS chargée
 
     </script>
 
