@@ -101,7 +101,7 @@ nav #accueil {
 
 #form_nav {
     position: relative;
-    transform: translate(200px);
+    transform: translate(0px);
 }
 
 #form_product {
@@ -192,6 +192,10 @@ nav #accueil {
     background-image: url(./media/ces_logo.png);
 }
 
+#form_PVCharacteristics ul, #form_PACCharacteristics ul {
+    padding: 0px;
+}
+
 #id_pv_power, #id_power {
     display: flex;
     justify-content: center;
@@ -202,7 +206,7 @@ nav #accueil {
 #id_pv_power li, #id_power li {
     width: 120px;
     height: 120px;
-    margin: 0px 10px 0px 0px;
+    margin: 0px 5px 5px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
