@@ -42,11 +42,87 @@
 
     <script type="text/javascript">
 
-      function suivantBtn() {
-            document.getElementById("form_nav").style.left = "20%";
+      const aides = {
+        one: ["14 879 €", "19 074 €", "29 148 €", "> 29 148 €"],
+        two: ["21 760 €", "27 896 €", "42 848 €", "> 42 848 €"],
+        three: ["26 170 €", "33 547 €", "51 592 €", "> 51 592 €"],
+        four: ["30 572 €", "39 192 €", "60 336 €", "> 60 336 €"],
+        five: ["34 993 €", "44 860 €", "69 081 €", "> 69 081 €"],
+        six: ["39 405 €", "50 511 €", "77 825 €", "> 77 825 €"],
+        seven: ["43 817 €", "56 162 €", "86 569 €", "> 86 569 €"],
+        eight: ["48 229 €", "61 813 €", "95 313 €", "> 95 313 €"],
       }
 
-      var x = document.forms[1].addEventListener("load", suivantBtn())
+      function suivantBtn() {
+        //document.getElementById("form_nav").style.left = "30%";
+      }
+
+      function updatePrime1() {
+        document.getElementsByTagName("label")[10].innerText = aides.one[0]
+        document.getElementsByTagName("label")[11].innerText = aides.one[1]
+        document.getElementsByTagName("label")[12].innerText = aides.one[2]
+        document.getElementsByTagName("label")[13].innerText = aides.one[3]
+      }
+
+      function updatePrime2() {
+        document.getElementsByTagName("label")[10].innerText = aides.two[0]
+        document.getElementsByTagName("label")[11].innerText = aides.two[1]
+        document.getElementsByTagName("label")[12].innerText = aides.two[2]
+        document.getElementsByTagName("label")[13].innerText = aides.two[3]
+      }
+
+      function updatePrime3() {
+        document.getElementsByTagName("label")[10].innerText = aides.three[0]
+        document.getElementsByTagName("label")[11].innerText = aides.three[1]
+        document.getElementsByTagName("label")[12].innerText = aides.three[2]
+        document.getElementsByTagName("label")[13].innerText = aides.three[3]
+      }
+
+      function updatePrime4() {
+        document.getElementsByTagName("label")[10].innerText = aides.four[0]
+        document.getElementsByTagName("label")[11].innerText = aides.four[1]
+        document.getElementsByTagName("label")[12].innerText = aides.four[2]
+        document.getElementsByTagName("label")[13].innerText = aides.four[3]
+      }
+
+      function updatePrime5() {
+        document.getElementsByTagName("label")[10].innerText = aides.five[0]
+        document.getElementsByTagName("label")[11].innerText = aides.five[1]
+        document.getElementsByTagName("label")[12].innerText = aides.five[2]
+        document.getElementsByTagName("label")[13].innerText = aides.five[3]
+      }
+
+      function updatePrime6() {
+        document.getElementsByTagName("label")[10].innerText = aides.six[0]
+        document.getElementsByTagName("label")[11].innerText = aides.six[1]
+        document.getElementsByTagName("label")[12].innerText = aides.six[2]
+        document.getElementsByTagName("label")[13].innerText = aides.six[3]
+      }
+
+      function updatePrime7() {
+        document.getElementsByTagName("label")[10].innerText = aides.seven[0]
+        document.getElementsByTagName("label")[11].innerText = aides.seven[1]
+        document.getElementsByTagName("label")[12].innerText = aides.seven[2]
+        document.getElementsByTagName("label")[13].innerText = aides.seven[3]
+      }
+
+      function updatePrime8() {
+        document.getElementsByTagName("label")[10].innerText = aides.eight[0]
+        document.getElementsByTagName("label")[11].innerText = aides.eight[1]
+        document.getElementsByTagName("label")[12].innerText = aides.eight[2]
+        document.getElementsByTagName("label")[13].innerText = aides.eight[3]
+      }
+
+      document.getElementById("id_family_members_0").addEventListener("click", function() {updatePrime1()})
+      document.getElementById("id_family_members_1").addEventListener("click", function() {updatePrime2()})
+      document.getElementById("id_family_members_2").addEventListener("click", function() {updatePrime3()})
+      document.getElementById("id_family_members_3").addEventListener("click", function() {updatePrime4()})
+      document.getElementById("id_family_members_4").addEventListener("click", function() {updatePrime5()})
+      document.getElementById("id_family_members_5").addEventListener("click", function() {updatePrime6()})
+      document.getElementById("id_family_members_6").addEventListener("click", function() {updatePrime7()})
+      document.getElementById("id_family_members_7").addEventListener("click", function() {updatePrime8()})
+
+      document.forms[1].addEventListener("load", suivantBtn())
 
     </script>
 

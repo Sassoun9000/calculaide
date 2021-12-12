@@ -101,6 +101,7 @@ nav #accueil {
 
 #form_nav {
     position: relative;
+    transform: translate(200px);
 }
 
 #form_product {
@@ -583,6 +584,6 @@ h1 {
 
 .previous-form input {
     position: relative;
-    bottom: 54px;
+    bottom: 55px;
     transform: translateX(-130px);
 }

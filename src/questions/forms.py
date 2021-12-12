@@ -105,4 +105,4 @@ class ColorCategory(forms.Form):
         label="Nombre de personnes composant le foyer fiscal",
         widget=MyRadioSelect
     )
-    income_color = forms.ChoiceField(choices=COLOR_CODES, label="Catégorie", widget=MyRadioSelect)
+    income_color = forms.ChoiceField(choices=COLOR_CODES, label="Revenu Fiscal de Référence", widget=MyRadioSelect)
