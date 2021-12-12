@@ -100,8 +100,7 @@ nav #accueil {
 }
 
 #form_nav {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    position: relative;
 }
 
 #form_product {
@@ -109,6 +108,7 @@ nav #accueil {
     flex-direction: row;
     justify-content: center;
     margin-top: 7%;
+    margin-bottom: 15%;
 }
 
 #form_product p {
@@ -556,7 +556,8 @@ h1 {
 }
 
 .project_item {
-    width: 380px;
+    width: max-content;
+    min-width: 400px;
 }
 
 #votre_projet {
@@ -578,4 +579,10 @@ h1 {
 
 .next:active, .previous:active {
     border: 3px solid rgba(255, 255, 255, 0.90);
+}
+
+.previous-form input {
+    position: relative;
+    bottom: 54px;
+    transform: translateX(-130px);
 }

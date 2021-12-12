@@ -70,25 +70,43 @@
                 {% endif %}
 
                 {% if answers.iso %}
-
-                    {% if answers.surface_rampants %}
+                    {% if answers.surface_rampants and answers.surface_perdus == "0" %}
                         <li>
-                            Isolation sous rampants de {{ answers.surface_rampants }} m²
-                            -----------
-                            {{ results.iso_pr_sub }} €
-                            -----------
-                            {{ results.iso_cee_sub }} €
+                            <div class="project_item">
+                               Isolation sous rampants de {{ answers.surface_rampants }} m² 
+                            </div>
+                            <div class="primes_values">
+                                {{ results.iso_pr_sub }} €
+                            </div>
+                            <div class="primes_values">
+                                {{ results.iso_cee_sub }} €
+                            </div>
                         </li>
-                    {% elif answers.surface_perdus %}
+                    {% elif answers.surface_perdus and answers.surface_rampants == "0" %}
                         <li>
-                            Isolation combles perdues de {{ answers.surface_perdus }} m²
+                            <div class="project_item">
+                                Isolation combles perdues de {{ answers.surface_perdus }} m²
+                            </div>
+                            <div class="primes_values">
+                                {{ results.iso_pr_sub }} €
+                            </div>
+                            <div class="primes_values">
+                                {{ results.iso_cee_sub }} €
+                            </div>
                         </li>
                     {% else %}
                         <li>
-                            Isolation {{ answers.surface_rampants }} m² sous rampants, {{ answers.surface_perdus }} m² combles perdues
+                            <div class="project_item">
+                                Isolation {{ answers.surface_rampants }} m² sous rampants, {{ answers.surface_perdus }} m² combles perdues
+                            </div>
+                            <div class="primes_values">
+                                {{ results.iso_pr_sub }} €
+                            </div>
+                            <div class="primes_values">
+                                {{ results.iso_cee_sub }} €
+                            </div>
                         </li>
                     {% endif %}
-
                 {% endif %}
 
                 {% if answers.btd %}
