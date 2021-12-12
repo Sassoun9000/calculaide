@@ -123,6 +123,7 @@ nav #accueil {
 }
 
 #form_SurfaceIso {
+    margin-top: 12%;
     margin-bottom: 100px;
 }
 
@@ -566,7 +567,7 @@ h1 {
 
 .primes_values {
     width: 140px;
-    text-align: center;
+    text-align: right;
 }
 
 .project_item {
