@@ -134,7 +134,7 @@ def result_process(answers):
     income = answers["income_color"]
     if "pv" in answers:
         pv_power = float(answers["pv_power"])
-        if pv_power >= 3:
+        if pv_power <= 3:
             kwc_amount = "pv3"
         elif 3 < pv_power <= 9:
             kwc_amount = "pv9"
@@ -142,9 +142,9 @@ def result_process(answers):
             kwc_amount = "pv36"
         else:
             kwc_amount = "pv100"
-        total_sub["pv_pr_sub"] = pv_power * PR_AMOUNT[income][kwc_amount]
+        total_sub["pv_pr_sub"] = int(pv_power * PR_AMOUNT[income][kwc_amount])
         total_sub["pv_cee_sub"] = 0
-        if answers["pv_type"] == "hybrid":
+        if answers["pv_type"] == "hybrides":
             total_sub["pv_pr_sub"] += PR_AMOUNT[income]["pv_hybrid"]
             total_sub["pv_cee_sub"] += CEE_AMOUNT[income]["pv_hybrid"]
 
@@ -161,13 +161,13 @@ def result_process(answers):
         total_sub["iso_pr_sub"] = 0
         total_sub["iso_cee_sub"] = 0
         if answers["surface_rampants"]:
-            r_dim = answers["surface_rampants"]
-            total_sub["iso_pr_sub"] += PR_AMOUNT[income]["sous_rampants"] * float(r_dim)
-            total_sub["iso_cee_sub"] += CEE_AMOUNT[income]["sous_rampants"] * float(r_dim)
+            r_dim = int(answers["surface_rampants"])
+            total_sub["iso_pr_sub"] += PR_AMOUNT[income]["sous_rampants"] * r_dim
+            total_sub["iso_cee_sub"] += CEE_AMOUNT[income]["sous_rampants"] * r_dim
         if answers["surface_perdus"]:
-            p_dim = answers["surface_perdus"]
-            total_sub["iso_pr_sub"] += PR_AMOUNT[income]["combles_perdus"] * float(p_dim)
-            total_sub["iso_cee_sub"] += CEE_AMOUNT[income]["combles_perdus"] * float(p_dim)
+            p_dim = int(answers["surface_perdus"])
+            total_sub["iso_pr_sub"] += PR_AMOUNT[income]["combles_perdus"] * p_dim
+            total_sub["iso_cee_sub"] += CEE_AMOUNT[income]["combles_perdus"] * p_dim
 
         total_sub["total_pr"] += total_sub["iso_pr_sub"]
         total_sub["total_cee"] += total_sub["iso_cee_sub"]
@@ -186,4 +186,7 @@ def result_process(answers):
 
     print(total_sub["total_sub"], total_sub["total_pr"], total_sub["total_cee"])
     total_sub["total_sub"] = total_sub["total_pr"] + total_sub["total_cee"]
+
+    total_sub["total_sub"] = int(total_sub["total_sub"])
+
     return total_sub
