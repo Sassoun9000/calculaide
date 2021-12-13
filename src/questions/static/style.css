@@ -20,7 +20,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     height: 20vh;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
 }
 
 nav a {
@@ -209,7 +209,6 @@ nav #accueil {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin-bottom: 50px;
 }
 
 #id_pv_power li, #id_power li {
@@ -240,8 +239,8 @@ nav #accueil {
     min-width: 0px;
     width: min-content;
     position: relative;
-    bottom: 62%;
-    left: 3px;
+    bottom: 51%;
+    left: 43%;
     color:rgb(54, 54, 54);
 }
 
@@ -379,17 +378,17 @@ nav #accueil {
 #id_pv_type_0 {
     background-image: url(./media/bckgPVC.png);
     background-repeat: no-repeat;
-    background-position: center;
-    height: 250px;
-    width: 250px;
+    background-position: contain;
+    height: 180px;
+    width: 180px;
 }
 
 #id_pv_type_1 {
     background-image: url(./media/bckgPVH.png);
     background-repeat: no-repeat;
-    background-position: center;
-    height: 250px;
-    width: 250px;
+    background-position: contain;
+    height: 180px;
+    width: 180px;
 }
 
 #id_pac_type_0 {
@@ -399,8 +398,8 @@ nav #accueil {
     background-size: contain;
     background-origin: content-box;
     padding: 10px 30px 30px 30px;
-    height: 250px;
-    width: 250px;
+    height: 180px;
+    width: 180px;
 }
 
 #id_pac_type_1 {
@@ -410,8 +409,8 @@ nav #accueil {
     background-size: contain;
     background-origin: content-box;
     padding: 10px 30px 30px 30px;
-    height: 250px;
-    width: 250px;
+    height: 180px;
+    width: 180px;
 }
 
 #id_pv_type_0:checked, #id_pv_type_1:checked, #id_pac_type_0:checked, #id_pac_type_1:checked {
@@ -435,6 +434,15 @@ nav #accueil {
 }
 
 #id_pac_type li label {
+    min-width: 200px;
+    width: min-content;
+    left: 12%;
+    color: rgb(54, 54, 54);
+    position: relative;
+    bottom: 20%;
+}
+
+id_pac_type label {
     min-width: 200px;
     width: min-content;
     left: 12%;

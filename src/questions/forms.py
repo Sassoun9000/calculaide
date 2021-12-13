@@ -75,8 +75,8 @@ class PACCharacteristics(forms.Form):
 
 
 class SurfaceIso(forms.Form):
-    surface_rampants = forms.IntegerField(label="Sous rampants")
-    surface_perdus = forms.IntegerField(label="Combles perdus")
+    surface_rampants = forms.IntegerField(label="Sous rampants (m²)")
+    surface_perdus = forms.IntegerField(label="Combles perdus (m²)")
 
 
 INMATES_NUMBER = [
