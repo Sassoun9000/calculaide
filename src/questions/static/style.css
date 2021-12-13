@@ -121,7 +121,7 @@ nav #accueil {
     justify-content: flex-end;
     align-items: center;
     margin: 5px;
-    max-width: 270px;
+    max-width: 180px;
 }
 
 #form_SurfaceIso {
@@ -157,13 +157,14 @@ nav #accueil {
 
 #form_product label {
     position: relative;
-    right: 94%;
+    right: 100%;
     top: 0px;
-    min-width: 250px;
-    max-width: 250px;
-    width: 250px;
-    height: 250px;
+    min-width: 180px;
+    max-width: 180px;
+    width: 180px;
+    height: 180px;
     display: flex;
+    font-size: 18px;
     align-items: flex-end;
     justify-content: center;
     color: rgb(54, 54, 54);
@@ -269,8 +270,8 @@ nav #accueil {
     min-width: 0px;
     width: min-content;
     position: relative;
-    bottom: 62%;
-    left: 3px;
+    bottom: 52%;
+    left: 45%;
     color:rgb(54, 54, 54);
 }
 
@@ -316,28 +317,36 @@ nav #accueil {
     min-width: 200px;
     width: min-content;
     position: relative;
-    bottom: 47%;
+    bottom: 50%;
+    left: 14%;
+}
+
+#id_income_color label {
+    min-width: 200px;
+    width: min-content;
+    position: relative;
+    bottom: 50%;
     left: 1%;
 }
 
 #id_income_color_0 {
     background: rgb(17, 79, 212);
-    width: 250px;
+    width: 180px;
 }
 
 #id_income_color_1 {
     background: rgb(218, 187, 15);
-    width: 250px;
+    width: 180px;
 }
 
 #id_income_color_2 {
     background: rgb(107, 10, 102);
-    width: 250px;
+    width: 180px;
 }
 
 #id_income_color_3 {
     background: rgb(255, 39, 86);
-    width: 250px;
+    width: 180px;
 }
 
 #id_income_color_0:checked, #id_income_color_1:checked, #id_income_color_2:checked, #id_income_color_3:checked {
@@ -441,10 +450,10 @@ nav #accueil {
 
 input[type="checkbox"], input[type="radio"] {
     cursor: pointer;
-    width: 250px;
-    min-width: 250px;
-    height: 250px;
-    font-size: 28px;
+    width: 180px;
+    min-width: 180px;
+    height: 180px;
+    font-size: 22px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -470,7 +479,7 @@ label {
     font-family: "Raleway";
     font-style: normal;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 22px;
     line-height: 33px;
     text-align: center;
     color: #ffffff;
