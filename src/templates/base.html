@@ -42,6 +42,10 @@
 
     <script type="text/javascript">
 
+      let ramp = document.getElementById("id_surface_rampants")
+      let perdus = document.getElementById("id_surface_perdus")
+      let bin_input = true
+
       const aides = {
         one: ["14 879 €", "19 074 €", "29 148 €", "> 29 148 €"],
         two: ["21 760 €", "27 896 €", "42 848 €", "> 42 848 €"],
@@ -62,11 +66,64 @@
           tile_index++
         }
       }
-
-      for ( let i = 0 ; i < 8 ; i++ ) {
-        let prim_array = ["one", "two", "three", "four", "five", "six", "seven", "eight"]
-        document.getElementById("id_family_members_" + i).addEventListener("click", function() {updatePrime(prim_array[i])})
+      
+      try {
+        for ( let i = 0 ; i < 8 ; i++ ) {
+          let prim_array = ["one", "two", "three", "four", "five", "six", "seven", "eight"]
+          document.getElementById("id_family_members_" + i).addEventListener("click", function() {updatePrime(prim_array[i])})
+        }
       }
+      catch 
+      {}
+
+      function showKeypad(e) {
+        let keypad = document.getElementById("keypad");
+        if (e == "id_surface_rampants") {
+          keypad.style.display ="grid"
+          keypad.style.transform ="translateY(-3px)"
+          if (perdus.value == "") {
+            perdus.value = "0"
+          }
+        }
+        else {
+          keypad.style.display ="grid"
+          keypad.style.transform ="translateY(65px)"
+          if (ramp.value == "") {
+            ramp.value = "0"
+          }
+        }
+      }
+
+      try {
+        let key_value = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "arr"]
+        for ( let i = 0 ; i < 12 ; i++ ) {
+          var key_nb = document.getElementById("keypad_" + key_value[i])
+          key_nb.addEventListener("click", 
+          function() {
+            if (bin_input == true) {
+              document.getElementById("id_surface_rampants").value += key_value[i]
+            }
+            else {
+              document.getElementById("id_surface_rampants").value += key_value[i]
+            }
+          })
+        }
+      }
+      catch(e)
+      {}
+
+      try {
+        ramp.addEventListener("click", function() {showKeypad("id_surface_rampants")})
+        perdus.addEventListener("click", function() {showKeypad("id_surface_perdus")})
+      }
+      catch(e) 
+      {}
+
+      try {
+
+      }
+      catch(e)
+      {}
 
     </script>
 

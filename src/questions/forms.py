@@ -70,13 +70,13 @@ PAC_TYPE = [("pac_air", "Air-Air"), ("pac_eau", "Air-Eau")]
 
 
 class PACCharacteristics(forms.Form):
-    power = forms.ChoiceField(choices=PAC_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=MyRadioSelect)
+    power = forms.ChoiceField(choices=PAC_POWER_LEVEL, label="Dimensionnement de l'installation (kW)", widget=MyRadioSelect)
     pac_type = forms.ChoiceField(choices=PAC_TYPE, label="Type de PAC", widget=MyRadioSelect)
 
 
 class SurfaceIso(forms.Form):
-    surface_rampants = forms.IntegerField(label="Sous rampants (m²)")
-    surface_perdus = forms.IntegerField(label="Combles perdus (m²)")
+    surface_rampants = forms.IntegerField(label="Sous rampants (m²)", initial=0)
+    surface_perdus = forms.IntegerField(label="Combles perdus (m²)", initial=0)
 
 
 INMATES_NUMBER = [

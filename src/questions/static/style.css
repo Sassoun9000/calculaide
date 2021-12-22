@@ -7,8 +7,26 @@
     --checked-color: rgb(25, 105, 255);
 }
 
+#keypad {
+    display: none;
+    position: absolute;
+    left: 15%;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+    justify-content: end;
+}
+
+.keypad_input {
+    height: 50px;
+    width: 50px;
+    font-size: 25px;
+    font-family: Raleway;
+    color: rgb(54, 54, 54);
+    background: white;
+}
+
 body {
-    background: linear-gradient(60.4deg, #55B995 29.29%, #00A6B8 98.36%);
+    /*background: linear-gradient(60.4deg, #55B995 29.29%, #00A6B8 98.36%);*/
+    background: rgb(252, 252, 252);
     font-family: "Raleway";
     min-height: 100vh;
     margin: 0;
@@ -39,6 +57,7 @@ nav #accueil {
     height:60px;
     width: 200px;
     margin: 60px 60px 0px 0px;
+    color:rgb(54, 54, 54);
 }
 
 #logo {
@@ -150,7 +169,7 @@ nav #accueil {
     appearance: none;
     -moz-appearance: textfield;
     outline: 0;
-    background: rgba(185, 236, 211, 0.91);
+    background: rgba(255, 255, 255, 0.91);
     border-radius: 4px;
     font-size: 24px;
 }
@@ -231,7 +250,7 @@ nav #accueil {
     -moz-appearance: none;
     appearance: none;
     outline: 0;
-    background: rgba(185, 236, 211, 0.91);
+    background: rgba(255, 255, 255, 0.91);
     border-radius: 4px;
 }
 
@@ -286,7 +305,7 @@ nav #accueil {
     -moz-appearance: none;
     appearance: none;
     outline: 0;
-    background: rgba(185, 236, 211, 0.91);
+    background: rgba(255, 255, 255, 0.91);
     border-radius: 4px;
 }
 
@@ -318,6 +337,7 @@ nav #accueil {
     position: relative;
     bottom: 50%;
     left: 14%;
+    color: white;
 }
 
 #id_income_color label {
@@ -326,25 +346,30 @@ nav #accueil {
     position: relative;
     bottom: 50%;
     left: 1%;
+    color: white;
 }
 
 #id_income_color_0 {
     background: rgb(17, 79, 212);
+    border: none;
     width: 180px;
 }
 
 #id_income_color_1 {
     background: rgb(218, 187, 15);
+    border: none;
     width: 180px;
 }
 
 #id_income_color_2 {
     background: rgb(107, 10, 102);
+    border: none;
     width: 180px;
 }
 
 #id_income_color_3 {
     background: rgb(255, 39, 86);
+    border: none;
     width: 180px;
 }
 
@@ -466,8 +491,10 @@ input[type="checkbox"], input[type="radio"] {
     -moz-appearance: none;
     appearance: none;
     outline: 0;
-    background: rgba(185, 236, 211, 0.91);
+    background: rgba(255, 255, 255, 0.91);
     border-radius: 4px;
+    border: 1.5px solid royalblue;
+    box-shadow: 0px 0px 2px 0px rgb(71, 71, 71);
 }
 
 input[type="checkbox"]:checked, input[type="radio"]:checked {
@@ -490,13 +517,13 @@ label {
     font-size: 22px;
     line-height: 33px;
     text-align: center;
-    color: #ffffff;
+    color: rgb(54, 54, 54);
 } 
 
 .next, .previous {
     background: #0095B6;
     border: 1px solid rgba(255, 255, 255, 0.46);
-    box-shadow: 0px 0px 62px -5px rgba(0, 0, 0, 0.25), inset 0px 0px 5px 4px rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 2px -5px rgba(0, 0, 0, 0.25), inset 0px 0px 5px 4px rgba(255, 255, 255, 0.25);
     border-radius: 8px;
     color: white;
     min-width: 100px;
@@ -511,7 +538,6 @@ label {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #FFFFFF;
 
     outline: none;
     text-decoration: none;
@@ -543,7 +569,7 @@ label {
 
 h1 {
     text-align: center;
-    color: white;
+    color: rgb(54, 54, 54);
     margin: 20px 0px 50px 0px;
 }
 
@@ -552,7 +578,7 @@ h1 {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    color: white;
+    color: rgb(54, 54, 54);
 }
 
 #results_data {
