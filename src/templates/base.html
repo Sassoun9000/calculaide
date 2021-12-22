@@ -47,14 +47,14 @@
       let bin_input = true
 
       const aides = {
-        one: ["14 879 €", "19 074 €", "29 148 €", "> 29 148 €"],
-        two: ["21 760 €", "27 896 €", "42 848 €", "> 42 848 €"],
-        three: ["26 170 €", "33 547 €", "51 592 €", "> 51 592 €"],
-        four: ["30 572 €", "39 192 €", "60 336 €", "> 60 336 €"],
-        five: ["34 993 €", "44 860 €", "69 081 €", "> 69 081 €"],
-        six: ["39 405 €", "50 511 €", "77 825 €", "> 77 825 €"],
-        seven: ["43 817 €", "56 162 €", "86 569 €", "> 86 569 €"],
-        eight: ["48 229 €", "61 813 €", "95 313 €", "> 95 313 €"],
+        one: ["< 14 879 €", "< 19 074 €", "< 29 148 €", "> 29 148 €"],
+        two: ["< 21 760 €", "< 27 896 €", "< 42 848 €", "> 42 848 €"],
+        three: ["< 26 170 €", "< 33 547 €", "< 51 592 €", "> 51 592 €"],
+        four: ["< 30 572 €", "< 39 192 €", "< 60 336 €", "> 60 336 €"],
+        five: ["< 34 993 €", "< 44 860 €", "< 69 081 €", "> 69 081 €"],
+        six: ["< 39 405 €", "< 50 511 €", "< 77 825 €", "> 77 825 €"],
+        seven: ["< 43 817 €", "< 56 162 €", "< 86 569 €", "> 86 569 €"],
+        eight: ["< 48 229 €", "< 61 813 €", "< 95 313 €", "> 95 313 €"],
       }
 
       function updatePrime(element) {
@@ -79,15 +79,21 @@
       function showKeypad(e) {
         let keypad = document.getElementById("keypad");
         if (e == "id_surface_rampants") {
+          ramp.style.border = "1.5px solid rgb(25, 105, 255)"
+          perdus.style.border = "none"
+          bin_input = true
           keypad.style.display ="grid"
-          keypad.style.transform ="translateY(-3px)"
+          //keypad.style.transform ="translateY(-3px)"
           if (perdus.value == "") {
             perdus.value = "0"
           }
         }
-        else {
+        else if (e == "id_surface_perdus") {
+          perdus.style.border = "1.5px solid rgb(25, 105, 255)"
+          ramp.style.border = "none"
+          bin_input = false
           keypad.style.display ="grid"
-          keypad.style.transform ="translateY(65px)"
+          //keypad.style.transform ="translateY(65px)"
           if (ramp.value == "") {
             ramp.value = "0"
           }
@@ -101,10 +107,16 @@
           key_nb.addEventListener("click", 
           function() {
             if (bin_input == true) {
-              document.getElementById("id_surface_rampants").value += key_value[i]
+              if (ramp.value == "0") {
+                ramp.value = ""
+              }
+              ramp.value += key_value[i]
             }
-            else {
-              document.getElementById("id_surface_rampants").value += key_value[i]
+            else if (bin_input == false) {
+              if (perdus.value == "0") {
+                perdus.value = ""
+              }
+              perdus.value += key_value[i]
             }
           })
         }
@@ -117,12 +129,6 @@
         perdus.addEventListener("click", function() {showKeypad("id_surface_perdus")})
       }
       catch(e) 
-      {}
-
-      try {
-
-      }
-      catch(e)
       {}
 
     </script>
