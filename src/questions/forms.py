@@ -54,7 +54,7 @@ PV_TYPE = [("classic", ""), ("hybrides", "")]
 
 
 class PVCharacteristics(forms.Form):
-    pv_power = forms.ChoiceField(choices=PV_POWER_LEVEL, label="Dimensionnement de l'installation (kWc)", widget=MyRadioSelect)
+    pv_power = forms.ChoiceField(choices=PV_POWER_LEVEL, label="Dimensionnement des panneaux photovoltaïques (kWc)", widget=MyRadioSelect)
     pv_type = forms.ChoiceField(choices=PV_TYPE, label="Type de panneaux", widget=MyRadioSelect)
 
 
@@ -70,8 +70,8 @@ PAC_TYPE = [("pac_air", "Air-Air"), ("pac_eau", "Air-Eau")]
 
 
 class PACCharacteristics(forms.Form):
-    power = forms.ChoiceField(choices=PAC_POWER_LEVEL, label="Dimensionnement de l'installation (kW)", widget=MyRadioSelect)
-    pac_type = forms.ChoiceField(choices=PAC_TYPE, label="Type de PAC", widget=MyRadioSelect)
+    power = forms.ChoiceField(choices=PAC_POWER_LEVEL, label="Dimensionnement de la pompe à chaleur (kW)", widget=MyRadioSelect)
+    pac_type = forms.ChoiceField(choices=PAC_TYPE, label="Type de pompe à chaleur", widget=MyRadioSelect)
 
 
 class SurfaceIso(forms.Form):
