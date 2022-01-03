@@ -381,7 +381,7 @@ nav #accueil {
 }
 
 #id_income_color_3 {
-    background: rgb(255, 39, 86);
+    background: rgb(255, 40, 112);
     border: none;
     width: 180px;
 }
@@ -389,7 +389,7 @@ nav #accueil {
 #id_income_color_0:checked, #id_income_color_1:checked, #id_income_color_2:checked, #id_income_color_3:checked {
     scale: 105%;
     border: solid 5px rgb(255, 255, 255);
-    box-shadow: 0px 0px 3px 1px rgb(71, 71, 71);
+    box-shadow: 0px 0px 2px 0.5px rgb(71, 71, 71);
     transition: 0.2s;
 }
 
@@ -470,7 +470,7 @@ nav #accueil {
 #id_pv_type li label {
     min-width: 200px;
     width: min-content;
-    left: 12%;
+    left: 0%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 20%;
@@ -479,7 +479,7 @@ nav #accueil {
 #id_pv_type label {
     min-width: 200px;
     width: min-content;
-    left: 12%;
+    left: 0%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 20%;
@@ -498,7 +498,7 @@ nav #accueil {
 #id_pac_type li label {
     min-width: 200px;
     width: min-content;
-    left: 12%;
+    left: 0%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 20%;
@@ -507,7 +507,7 @@ nav #accueil {
 #id_pac_type label {
     min-width: 200px;
     width: min-content;
-    left: 12%;
+    left: 0%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 20%;
@@ -536,7 +536,6 @@ input[type="checkbox"], input[type="radio"] {
 
 input[type="checkbox"]:checked, input[type="radio"]:checked {
     border: solid 5px rgb(27, 82, 153);
-    box-shadow: 0px 0px 2px 0px rgb(71, 71, 71);
     scale: 102%;
     transition: 0.1s;
 }
@@ -670,17 +669,45 @@ h1 {
 }
 
 .total_text {
-    margin-top: 70px;
     font-size: 30px;
+    margin-top: 70px;
+}
+
+#aides_div {
+    margin: 30px;
 }
 
 #aides {
-    font-size: 20px;
+    font-size: 14px;
     height: 90px;
-    color: white;
+    text-decoration: underline;
+    color: rgb(92, 92, 92);
     outline: none;
-    text-decoration: none;
 }
+
+#prim_renov {
+    font-weight: bold;
+}
+
+#blue_word {
+    color: rgb(17, 79, 212);
+    font-weight: bold;
+}
+
+#yellow_word {
+    color: rgb(218, 187, 15);
+    font-weight: bold;
+}
+
+#purple_word {
+    color: rgb(107, 10, 102);
+    font-weight: bold;
+}
+
+#pink_word {
+    color : rgb(255, 40, 112);
+    font-weight: bold;
+}  
 
 .next:active, .previous:active {
     border: 3px solid rgba(255, 255, 255, 0.90);

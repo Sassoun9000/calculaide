@@ -131,6 +131,26 @@
       catch(e) 
       {}
 
+      function openTable(color) {
+        
+
+        color.preventDefault();
+        return false;
+      }
+
+      try {
+        for ( let i = 0 ; i < 4 ; i++ ) {
+          let color_array = ["blue_word", "yellow_word", "purple_word", "pink_word"]
+          document.getElementById(color_array[i]).addEventListener(
+              "click", function() {
+              openTable(color_array[i])
+            }
+          )
+        }
+      }
+      catch(e)
+      {}
+
     </script>
 
   </body>

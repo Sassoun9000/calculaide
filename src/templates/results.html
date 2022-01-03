@@ -149,8 +149,19 @@
                 TOTAL DES AIDES  =  {{ results.total_sub }} €
             </div>
 
-            <div>
-                <a href="" id="aides">Toutes les aides</a>
+            <div id="aides_div">
+                <a href="" id="aides">
+                    < Toutes les aides <span id="prim_renov">MaPrimeRénov'</span> 
+                        {% if answers.income_color == "blue" %}
+                            <span id="blue_word">Bleu</span> >
+                        {% elif answers.income_color == "yellow" %}
+                            <span id="yellow_word">Jaune</span> >
+                        {% elif answers.income_color == "purple" %}
+                            <span id="purple_word">Violet</span> >
+                        {% elif answers.income_color == "pink" %}
+                            <span id="pink_word">Rose</span> >
+                        {% endif %}
+                </a>
             </div>
 
         </div> 
@@ -161,7 +172,10 @@
         Terminer
     </a>
 
-
+    <img src="../questions/static/media/prim_blue_table.jpg" alt="tableau catégorie bleu">
+    <img src="../questions/static/media/prim_yellow_table.jpg" alt="tableau catégorie jaune">
+    <img src="../questions/static/media/prim_purple_table.jpg" alt="tableau catégorie violet">
+    <img src="../questions/static/media/prim_pink_table.jpg" alt="tableau catégorie rose">
 
 
 {% endblock %}
