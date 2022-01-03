@@ -79,7 +79,7 @@ nav #accueil {
 }
 
 #accueil_logo {
-    background-image: url(./media/logo_OLD.png);
+    background-image: url(./media/logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -476,7 +476,7 @@ nav #accueil {
     bottom: 20%;
 }
 
-id_pv_type label {
+#id_pv_type label {
     min-width: 200px;
     width: min-content;
     left: 12%;
