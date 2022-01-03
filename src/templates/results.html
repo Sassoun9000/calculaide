@@ -58,6 +58,8 @@
                             Pompe à chaleur 
                             {% if answers.pac_type == "pac_eau" %}
                                 air-eau de {{ answers.power }} kW
+                            {% else %}
+                                air-air de {{ answers.power }} kW
                             {% endif %}
                         </div>
                         <div class="primes_values">
