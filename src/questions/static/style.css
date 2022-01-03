@@ -419,6 +419,9 @@ nav #accueil {
     background-position: contain;
     height: 180px;
     width: 180px;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
 }
 
 #id_pv_type_1 {
@@ -427,6 +430,9 @@ nav #accueil {
     background-position: contain;
     height: 180px;
     width: 180px;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
 }
 
 #id_pac_type_0 {
@@ -461,6 +467,24 @@ nav #accueil {
     margin-bottom: 70px;
 }
 
+#id_pv_type li label {
+    min-width: 200px;
+    width: min-content;
+    left: 12%;
+    color: rgb(54, 54, 54);
+    position: relative;
+    bottom: 20%;
+}
+
+id_pv_type label {
+    min-width: 200px;
+    width: min-content;
+    left: 12%;
+    color: rgb(54, 54, 54);
+    position: relative;
+    bottom: 20%;
+}
+
 #id_power, #id_pv_type, #id_pac_type {
     list-style: none;
 }
@@ -480,7 +504,7 @@ nav #accueil {
     bottom: 20%;
 }
 
-id_pac_type label {
+#id_pac_type label {
     min-width: 200px;
     width: min-content;
     left: 12%;

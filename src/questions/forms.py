@@ -50,7 +50,7 @@ PV_POWER_LEVEL = [
     ("12", "12"),
     ("15", "15"),
 ]
-PV_TYPE = [("classic", ""), ("hybrides", "")]
+PV_TYPE = [("classic", "Classiques"), ("hybrides", "Hybrides")]
 
 
 class PVCharacteristics(forms.Form):
