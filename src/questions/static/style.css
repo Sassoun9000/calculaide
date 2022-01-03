@@ -420,7 +420,7 @@ nav #accueil {
     height: 180px;
     width: 180px;
     background-position: center;
-    background-size: contain;
+    background-size: auto;
     background-origin: content-box;
 }
 
@@ -431,7 +431,7 @@ nav #accueil {
     height: 180px;
     width: 180px;
     background-position: center;
-    background-size: contain;
+    background-size: auto;
     background-origin: content-box;
 }
 
