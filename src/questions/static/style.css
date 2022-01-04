@@ -10,7 +10,7 @@
 #keypad {
     display: none;
     position: absolute;
-    left: 15%;
+    left: 10%;
     grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
     justify-content: end;
 }
@@ -65,7 +65,7 @@ nav #accueil {
     background-position-x: right;
     height:60px;
     width: 200px;
-    margin: 60px 60px 0px 0px;
+    margin: 90px 60px 0px 0px;
     color:rgb(54, 54, 54);
 }
 
@@ -73,7 +73,6 @@ nav #accueil {
     display: flex;
     justify-content: center;
     transform: translate(12%);
-    margin-top: 10px;
     scale: 100%;
 }
 
@@ -85,7 +84,7 @@ nav #accueil {
     position: relative;
     top: 30px;
     height: auto;
-    width: 800px;
+    width: 400px;
 }
 
 #centerme {
@@ -253,10 +252,10 @@ nav #accueil {
 
 #id_pv_power input, #id_power input {
     cursor: pointer;
-    width: 120px;
-    min-width: 120px;
-    height: 120px;
-    min-height: 120px;
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    min-height: 90px;
     font-size: 28px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -307,10 +306,10 @@ nav #accueil {
 
 #id_family_members input {
     cursor: pointer;
-    width: 120px;
-    min-width: 120px;
-    height: 120px;
-    min-height: 120px;
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    min-height: 90px;
     font-size: 28px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -357,31 +356,31 @@ nav #accueil {
     position: relative;
     bottom: 50%;
     left: 1%;
-    color: rgb(54, 54, 54);
+    color: rgb(255, 255, 255);
 }
 
 #id_income_color_0 {
     background: rgb(17, 79, 212);
     border: none;
-    width: 180px;
+    width: 130px;
 }
 
 #id_income_color_1 {
     background: rgb(218, 187, 15);
     border: none;
-    width: 180px;
+    width: 130px;
 }
 
 #id_income_color_2 {
     background: rgb(107, 10, 102);
     border: none;
-    width: 180px;
+    width: 130px;
 }
 
 #id_income_color_3 {
     background: rgb(255, 40, 112);
     border: none;
-    width: 180px;
+    width: 130px;
 }
 
 #id_income_color_0:checked, #id_income_color_1:checked, #id_income_color_2:checked, #id_income_color_3:checked {
@@ -415,8 +414,8 @@ nav #accueil {
     background-image: url(./media/bckgPVC.png);
     background-repeat: no-repeat;
     background-position: contain;
-    height: 180px;
-    width: 180px;
+    height: 130px;
+    width: 130px;
     background-position: center;
     background-size: auto;
     background-origin: content-box;
@@ -426,10 +425,10 @@ nav #accueil {
     background-image: url(./media/bckgPVH.png);
     background-repeat: no-repeat;
     background-position: contain;
-    height: 180px;
-    width: 180px;
+    height: 130px;
+    width: 130px;
     background-position: center;
-    background-size: auto;
+    background-size: contain;
     background-origin: content-box;
 }
 
@@ -477,10 +476,10 @@ nav #accueil {
 #id_pv_type label {
     min-width: 200px;
     width: min-content;
-    left: 0%;
+    left: -17%;
     color: rgb(54, 54, 54);
     position: relative;
-    bottom: 20%;
+    bottom: 2%;
 }
 
 #id_power, #id_pv_type, #id_pac_type {
@@ -519,8 +518,8 @@ nav #accueil {
 input[type="checkbox"], input[type="radio"] {
     cursor: pointer;
     width: 180px;
-    min-width: 180px;
-    height: 180px;
+    min-width: 120px;
+    height: 130px;
     font-size: 22px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -572,6 +571,7 @@ label {
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
 
     outline: none;
     text-decoration: none;
