@@ -724,10 +724,10 @@ h1 {
     background-position: center;
     background-size: contain;
     background-origin: content-box;
-    height: 110%;
+    height: 100%;
     width: 100%;
     position: absolute;
-    bottom: -6%;
+    bottom: 0%;
     visibility: hidden;
     z-index: 1001;
 }
