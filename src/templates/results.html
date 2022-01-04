@@ -150,7 +150,7 @@
             </div>
 
             <div id="aides_div">
-                <a href="" id="aides">
+                <button id="aides">
                     < Toutes les aides <span id="prim_renov">MaPrimeRénov'</span> 
                         {% if answers.income_color == "blue" %}
                             <span id="blue_word">Bleu</span> >
@@ -161,7 +161,7 @@
                         {% elif answers.income_color == "pink" %}
                             <span id="pink_word">Rose</span> >
                         {% endif %}
-                </a>
+                </button>
             </div>
 
         </div> 
@@ -172,10 +172,11 @@
         Terminer
     </a>
 
-    <img src="../questions/static/media/prim_blue_table.jpg" alt="tableau catégorie bleu">
-    <img src="../questions/static/media/prim_yellow_table.jpg" alt="tableau catégorie jaune">
-    <img src="../questions/static/media/prim_purple_table.jpg" alt="tableau catégorie violet">
-    <img src="../questions/static/media/prim_pink_table.jpg" alt="tableau catégorie rose">
-
+    <div id="table_blue"></div>
+    <div id="table_yellow"></div>
+    <div id="table_purple"></div>
+    <div id="table_pink"></div>
+    <div id="white_bckg"></div>
+    <button id="btn_close">Fermer le tableau</button>
 
 {% endblock %}
