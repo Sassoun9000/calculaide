@@ -82,7 +82,12 @@
         //perdus.attr('readonly', 'readonly');
         if (e == "id_surface_rampants") {
           ramp.style.border = "1.5px solid rgb(25, 105, 255)"
-          ramp.value = ""
+          if (ramp.value = "0") {
+            ramp.value = ""
+          }
+          if (perdus.value = "") {
+            perdus.value = "0"
+          }
           perdus.style.border = "none"
           bin_input = true
           //keypad.style.display ="grid"
@@ -90,7 +95,12 @@
         }
         else if (e == "id_surface_perdus") {
           perdus.style.border = "1.5px solid rgb(25, 105, 255)"
-          perdus.value = ""
+          if (perdus.value = "0") {
+            perdus.value = ""
+          }
+          if (ramp.value = "") {
+            ramp.value = "0"
+          }
           ramp.style.border = "none"
           bin_input = false
           //keypad.style.display ="grid"
