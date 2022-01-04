@@ -82,19 +82,19 @@
         //perdus.attr('readonly', 'readonly');
         if (e == "id_surface_rampants") {
           ramp.style.border = "1.5px solid rgb(25, 105, 255)"
+          ramp.value = ""
           perdus.style.border = "none"
           bin_input = true
-          keypad.style.display ="grid"
+          //keypad.style.display ="grid"
           //keypad.style.transform ="translateY(-3px)"
-            perdus.value = ""
         }
         else if (e == "id_surface_perdus") {
           perdus.style.border = "1.5px solid rgb(25, 105, 255)"
+          perdus.value = ""
           ramp.style.border = "none"
           bin_input = false
-          keypad.style.display ="grid"
+          //keypad.style.display ="grid"
           //keypad.style.transform ="translateY(65px)"
-            ramp.value = ""
         }
       }
 
