@@ -131,6 +131,41 @@
       catch(e) 
       {}
 
+      function openTable(color) {
+        let color_array = ["blue_word", "yellow_word", "purple_word", "pink_word"]
+        let color_table = ["blue", "yellow", "purple", "pink"]
+        let color_index = color_array.indexOf(color)
+        let table = document.getElementById("table_" + color_table[color_index])
+        let white_bckg = document.getElementById("white_bckg")
+        let btn_close = document.getElementById("btn_close")
+        
+        table.style.visibility = "visible"
+        white_bckg.style.visibility ="visible"
+        btn_close.style.visibility ="visible"
+
+        document.getElementById("btn_close").addEventListener("click", function() {
+          table.style.visibility = "hidden"
+          white_bckg.style.visibility ="hidden"
+          btn_close.style.visibility ="hidden"
+        })
+      }
+
+      try {
+        let color_word = document.getElementsByTagName("span")[1]
+        document.getElementById("aides").addEventListener("click", function() {openTable(color_word.id)})
+      }
+      catch(e)
+      {}
+
+      function closeTable() {
+        
+      }
+
+      try {
+      }
+      catch(e)
+      {}
+
     </script>
 
   </body>

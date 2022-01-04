@@ -21,12 +21,12 @@
     font-size: 25px;
     font-family: Raleway;
     color: rgb(54, 54, 54);
-    background: white;
+    background: rgb(255, 255, 255);
     /*border: 1px solid rgb(187, 187, 187);*/
     border: none;
     margin: 5px;
     border-radius: 3px;
-    box-shadow: 0px 0px 1.5px 0.3px rgb(54, 54, 54);
+    box-shadow: 0px 0px 1.5px 0.3px rgb(117,117, 117);
 }
 
 .keypad_input:active {
@@ -35,7 +35,6 @@
 }
 
 body {
-    /*background: linear-gradient(60.4deg, #55B995 29.29%, #00A6B8 98.36%);*/
     background: rgb(252, 252, 252);
     font-family: "Raleway";
     min-height: 100vh;
@@ -54,7 +53,7 @@ nav {
 nav a {
     font-size: 20px;
     height: 90px;
-    color: white;
+    color: rgb(255, 0, 0);
     outline: none;
     text-decoration: none;
 }
@@ -306,7 +305,6 @@ nav #accueil {
     color:rgb(54, 54, 54);
 }
 
-
 #id_family_members input {
     cursor: pointer;
     width: 120px;
@@ -350,7 +348,7 @@ nav #accueil {
     position: relative;
     bottom: 50%;
     left: 14%;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 #id_income_color label {
@@ -359,7 +357,7 @@ nav #accueil {
     position: relative;
     bottom: 50%;
     left: 1%;
-    color: white;
+    color: rgb(54, 54, 54);
 }
 
 #id_income_color_0 {
@@ -381,7 +379,7 @@ nav #accueil {
 }
 
 #id_income_color_3 {
-    background: rgb(255, 39, 86);
+    background: rgb(255, 40, 112);
     border: none;
     width: 180px;
 }
@@ -389,7 +387,7 @@ nav #accueil {
 #id_income_color_0:checked, #id_income_color_1:checked, #id_income_color_2:checked, #id_income_color_3:checked {
     scale: 105%;
     border: solid 5px rgb(255, 255, 255);
-    box-shadow: 0px 0px 3px 1px rgb(71, 71, 71);
+    box-shadow: 0px 0px 2px 0.5px rgb(71, 71, 71);
     transition: 0.2s;
 }
 
@@ -470,7 +468,7 @@ nav #accueil {
 #id_pv_type li label {
     min-width: 200px;
     width: min-content;
-    left: 12%;
+    left: 0%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 20%;
@@ -479,7 +477,7 @@ nav #accueil {
 #id_pv_type label {
     min-width: 200px;
     width: min-content;
-    left: 12%;
+    left: 0%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 20%;
@@ -498,7 +496,7 @@ nav #accueil {
 #id_pac_type li label {
     min-width: 200px;
     width: min-content;
-    left: 12%;
+    left: 0%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 20%;
@@ -507,7 +505,7 @@ nav #accueil {
 #id_pac_type label {
     min-width: 200px;
     width: min-content;
-    left: 12%;
+    left: 0%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 20%;
@@ -536,7 +534,6 @@ input[type="checkbox"], input[type="radio"] {
 
 input[type="checkbox"]:checked, input[type="radio"]:checked {
     border: solid 5px rgb(27, 82, 153);
-    box-shadow: 0px 0px 2px 0px rgb(71, 71, 71);
     scale: 102%;
     transition: 0.1s;
 }
@@ -562,7 +559,7 @@ label {
     border: 1px solid rgba(255, 255, 255, 0.46);
     box-shadow: 0px 0px 2px -5px rgba(0, 0, 0, 0.25), inset 0px 0px 5px 4px rgba(255, 255, 255, 0.25);
     border-radius: 8px;
-    color: white;
+    color: rgb(255, 255, 255);
     min-width: 100px;
     width: 190px;
     margin: auto;
@@ -582,10 +579,10 @@ label {
 
 #terminer {
     background: #00B65E;
-    border: 1px solid rgba(10, 125, 0, 0.46);
+    border: 1px solid rgba(10, 125, 0, 0.2);
     box-shadow: 0px 0px 62px -5px rgba(0, 0, 0, 0.25), inset 0px 0px 5px 4px rgba(255, 255, 255, 0.25);
     border-radius: 8px;
-    color: white;
+    color: rgb(255, 255, 255);
     min-width: 100px;
     width: 150px;
     margin: 50px auto auto auto;
@@ -670,9 +667,47 @@ h1 {
 }
 
 .total_text {
-    margin-top: 70px;
     font-size: 30px;
+    margin-top: 40px;
 }
+
+#aides_div {
+    margin: 30px;
+}
+
+#aides {
+    font-size: 14px;
+    height: 35px;
+    text-decoration: underline;
+    color: rgb(92, 92, 92);
+    outline: none;
+    border: none;
+    background: none;
+}
+
+#prim_renov {
+    font-weight: bold;
+}
+
+#blue_word {
+    color: rgb(17, 79, 212);
+    font-weight: bold;
+}
+
+#yellow_word {
+    color: rgb(218, 187, 15);
+    font-weight: bold;
+}
+
+#purple_word {
+    color: rgb(107, 10, 102);
+    font-weight: bold;
+}
+
+#pink_word {
+    color : rgb(255, 40, 112);
+    font-weight: bold;
+}  
 
 .next:active, .previous:active {
     border: 3px solid rgba(255, 255, 255, 0.90);
@@ -682,4 +717,70 @@ h1 {
     position: relative;
     bottom: 110px;
     transform: translateX(-130px);
+}
+
+#table_blue, #table_yellow, #table_purple, #table_pink {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-origin: content-box;
+    height: 110%;
+    width: 100%;
+    position: absolute;
+    bottom: -6%;
+    visibility: hidden;
+    z-index: 1001;
+}
+
+#table_blue {
+    background-image: url(./media/prim_blue_table.jpg);
+}
+
+#table_yellow {
+    background-image: url(./media/prim_yellow_table.jpg);
+}
+
+#table_purple {
+    background-image: url(./media/prim_purple_table.jpg);
+}
+
+#table_pink {
+    background-image: url(./media/prim_pink_table.jpg);
+}
+
+#white_bckg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 0%;
+    z-index: 1000;
+    visibility: hidden;
+    background: rgb(255, 255, 255);
+}
+
+#btn_close {
+    position: absolute;
+    bottom: 50%;
+    right: 15%;
+    background: #464646cc;
+    border: 1px solid rgb(65, 65, 65);
+    box-shadow: 0px 0px 3px -5px rgba(0, 0, 0, 0.25), inset 0px 0px 5px 4px rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    min-width: 100px;
+    width: 150px;
+    padding: 10px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    outline: none;
+    text-decoration: none;
+    visibility: hidden;
+    z-index: 1002;
 }
