@@ -349,7 +349,7 @@ nav #accueil {
     width: min-content;
     position: relative;
     bottom: 50%;
-    left: 14%;
+    left: 12%;
     color: rgb(255, 255, 255);
 }
 
@@ -358,7 +358,7 @@ nav #accueil {
     width: min-content;
     position: relative;
     bottom: 50%;
-    left: 21%;
+    left: 12%;
     color: rgb(255, 255, 255);
 }
 
@@ -472,18 +472,18 @@ nav #accueil {
 }
 
 #id_pv_type li label {
-    min-width: 200px;
+    min-width: 160px;
     width: min-content;
-    left: 0%;
+    left: -4%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 20%;
 }
 
 #id_pv_type label {
-    min-width: 200px;
+    min-width: 160px;
     width: min-content;
-    left: -17%;
+    left: -4%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 2%;
@@ -500,18 +500,18 @@ nav #accueil {
 }
 
 #id_pac_type li label {
-    min-width: 200px;
+    min-width: 110px;
     width: min-content;
-    left: 0%;
+    left: 10%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 2%;
 }
 
 #id_pac_type label {
-    min-width: 200px;
+    min-width: 110px;
     width: min-content;
-    left: -14%;
+    left: 10%;
     color: rgb(54, 54, 54);
     position: relative;
     bottom: 2%;
