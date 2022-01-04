@@ -46,7 +46,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 20vh;
+    height: 14vh;
     margin-bottom: 5px;
 }
 
@@ -82,9 +82,10 @@ nav #accueil {
     background-size: contain;
     background-position: center;
     position: relative;
-    top: 30px;
+    top: 29px;
     height: auto;
     width: 400px;
+    transform: translate(18%);
 }
 
 #centerme {
@@ -129,7 +130,7 @@ nav #accueil {
 
 #form_nav {
     position: relative;
-    margin-top: 50px;
+    margin-top: 67px;
     bottom: 55px;
     transform: translate(130px);
 }
@@ -205,6 +206,8 @@ nav #accueil {
     background-size: contain;
     background-origin: content-box;
     padding: 30px;
+    min-width: 180px;
+    height: 180px;
 }
 
 #form_product input:checked {
@@ -342,7 +345,7 @@ nav #accueil {
 }
 
 #id_income_color li label {
-    min-width: 200px;
+    min-width: 140px;
     width: min-content;
     position: relative;
     bottom: 50%;
@@ -351,11 +354,11 @@ nav #accueil {
 }
 
 #id_income_color label {
-    min-width: 200px;
+    min-width: 140px;
     width: min-content;
     position: relative;
     bottom: 50%;
-    left: 1%;
+    left: 21%;
     color: rgb(255, 255, 255);
 }
 
@@ -363,24 +366,28 @@ nav #accueil {
     background: rgb(17, 79, 212);
     border: none;
     width: 130px;
+    margin: 0px 25px 0px 25px;
 }
 
 #id_income_color_1 {
     background: rgb(218, 187, 15);
     border: none;
     width: 130px;
+    margin: 0px 25px 0px 25px;
 }
 
 #id_income_color_2 {
     background: rgb(107, 10, 102);
     border: none;
     width: 130px;
+    margin: 0px 25px 0px 25px;
 }
 
 #id_income_color_3 {
     background: rgb(255, 40, 112);
     border: none;
     width: 130px;
+    margin: 0px 25px 0px 25px;
 }
 
 #id_income_color_0:checked, #id_income_color_1:checked, #id_income_color_2:checked, #id_income_color_3:checked {
@@ -436,22 +443,22 @@ nav #accueil {
     background-image: url(./media/air.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-origin: content-box;
     padding: 10px 30px 30px 30px;
-    height: 180px;
-    width: 180px;
+    height: 130px;
+    width: 130px;
 }
 
 #id_pac_type_1 {
     background-image: url(./media/water.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-origin: content-box;
     padding: 10px 30px 30px 30px;
-    height: 180px;
-    width: 180px;
+    height: 130px;
+    width: 130px;
 }
 
 #id_pv_type_0:checked, #id_pv_type_1:checked, #id_pac_type_0:checked, #id_pac_type_1:checked {
@@ -498,16 +505,16 @@ nav #accueil {
     left: 0%;
     color: rgb(54, 54, 54);
     position: relative;
-    bottom: 20%;
+    bottom: 2%;
 }
 
 #id_pac_type label {
     min-width: 200px;
     width: min-content;
-    left: 0%;
+    left: -14%;
     color: rgb(54, 54, 54);
     position: relative;
-    bottom: 20%;
+    bottom: 2%;
 }
 
 #pv_logement p label {
