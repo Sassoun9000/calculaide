@@ -57,6 +57,5 @@ def questions(request):
         context["form"] = ProjectChoices()
         context["form_id"] = "form_product"
         context["first_question"] = True
-        print("Première itération")
 
     return render(request, "questions.html", context=context)
